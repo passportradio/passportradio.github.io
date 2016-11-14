@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="">
+		<title>PS Radio Dashboard</title>
+		<link rel="stylesheet" href="css/import.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+		<script src="js/Chart.min.js"></script>
+		<!-- HTML shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if ly IE 9]>
+		<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<!-- JS
+			- как подписываться на чужие события
+			- придумать что-нибудь с перетаскиванием-->
+	</head>
+	<body>
+		<div class="container">
+		<div class="column column1">
+			<div class="widjet vplayer">
+				<div class="vpayer__viewer">
+					<button class="vpayer__play js_play" type="button" name="play">&#xea1c;</button>
+					<video class="vpayer__video js_video" src="video/0c9523f7651f.480.mp4"></video>
+				</div>
+				<div class="vplayer__controls">
+					<button class="vplayer__pause js_playpause" type="button" name="pause">&#xea1c;</button>
+					<button class="vplayer__volume" type="button" name="volume"></button>
+					<div class="vplayer__timeline">
+						<div class="v-player__total">
+							<div class="v-player__current">
+								<div class="v-player__progress"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="widjet mailbox">
+				<h1 class="widjet__title">Mailbox</h1>
+				<ul class="mailbox__list">
+					<li class="mailbox__item mailbox__item_inbox mailbox__item_active">
+						<span class="mailbox__text">Inbox</span>
+						<span class="mailbox__notification">3</span>
+					</li>
+					<li class="mailbox__item mailbox__item_starred">
+						<span class="mailbox__text">Starred</span>
+						<span class="mailbox__notification">7</span>
+					</li>
+					<li class="mailbox__item mailbox__item_flagged">
+						<span class="mailbox__text">Flagged</span>
+						<span class="mailbox__notification">13</span>
+					</li>
+					<li class="mailbox__item mailbox__item_sent">
+						<span class="mailbox__text">Sent</span>
+						<span class="mailbox__notification">284</span>
+					</li>
+					<li class="mailbox__item mailbox__item_deleted">
+						<span class="mailbox__text">Deleted</span>
+						<span class="mailbox__notification">6</span>
+					</li>
+				</ul>
+				<button class="mailbox__more-btn"><span class="mailbox__more-btn-text">More</span></button>
+			</div>
+		</div>
+		<div class="column column2">
+			<div class="widjet tasks">
+				<h1 class="widjet__title">Tasks Completed</h1>
+				<ul class="tasks__content">
+					<li class="tasks__content-item" data-task-content="chart">
+						<div class="tasks__data">
+							<canvas class="tasks__completed-pie" width="200" height="200"></canvas>
+							<div class="tasks__pie">
+								<span class="tasks__data-completed">0</span>
+								<sup class="tasks__data-pie-sup">%</sup>
+							</div>
+						</div>
+					</li>
+					<li class="tasks__content-item tasks__content-item_active" data-task-content="tasks">
+						<ul class="todo">
+							<script id="template-task" type="text/template">
+								{{#tasks}}
+								<li class="todo__item">
+								  <input id="{{id}}" class="todo__checkbox" type="checkbox" {{checked}} />
+								  <label for="{{id}}" class="todo__label"></label>
+								  <span class="todo__content">{{value}}</span>
+								</li>
+								{{/tasks}}
+							</script>
+						</ul>
+						<div class="todo__add">
+							<input class="todo__add-input  js_input_new_type" type="text" placeholder="Type a new task"/>
+						</div>
+					</li>
+					<li class="tasks__content-item" data-task-content="events">
+						<ul class="list-events">
+							<script id="template-event" type="text/template">
+								{{#events}}
+								<li class="list-events__item">
+								    <div class="list-events__location" title="{{location}}"></div>
+								    <span class="list-events__content">{{value}}</span>
+								</li>
+								{{/events}}
+							</script>
+						</ul>
+						<div class="list-events__add">
+							<input class="list-events__add-input js_input_new_type" type="text" placeholder="Type a new event"/>
+						</div>
+					</li>
+				</ul>
+				<ul class="tasks__control">
+					<li class="tasks__control-item tasks__control-item_chart" data-task-control="chart">
+						<a class="tasks__control-link" href="#">Chart</a>
+					</li>
+					<li class="tasks__control-item tasks__control-item_tasks tasks__control-item_active" data-task-control="tasks">
+						<a class="tasks__control-link" href="#">Tasks</a>
+					</li>
+					<li class="tasks__control-item tasks__control-item_events" data-task-control="events">
+						<a class="tasks__control-link" href="#">Events</a>
+					</li>
+				</ul>
+			</div>
+			<div class="widjet status">
+				<h1 class="widjet__title widjet__title_icon widjet__title_icon-cldr">January 25, 2013</h1>
+				<ul class="status__list">
+					<li class="status__item">
+						<span class="status__icon status__icon_location"></span>
+						<div class="status__content status__content_active" id="js_geo_city">Поиск...</div>
+					</li>
+					<li class="status__item">
+						<span class="status__icon status__icon_task"></span>
+						<div class="status__content">
+							<input class="status__coment-input" type="text" name="comment" value="">
+						</div>
+					</li>
+					<li class="status__item">
+						<span class="status__icon status__icon_event"></span>
+						<div class="status__content">
+							<input class="status__location-input" type="text" name="location" value="">
+						</div>
+					</li>
+				</ul>
+				<button class="status__btn-add" type="button" name="button">add event</button>
+            </div>
+		</div>
+		<div class="column column3">
+			<div class="widjet login">
+				<form class="login__form" action="index.html" method="post">
+					<label class="login__label-username clearfix" for="username">
+					<input class="login__username" id="username" type="text" name="name" value="" placeholder="Username">
+					</label>
+					<label class="login__label-pass clearfix" for="password">
+					<input class="login__pass" id="password" class="login__pass" type="password" name="name" value="" placeholder="Password">
+					</label>
+					<button class="login__submit" type="button" name="button">log in</button>
+				</form>
+			</div>
+			<div class="widjet profile">
+				<div class="profile__wrapper">
+					<figure class="profile__photo">
+						<img src="images/user_photo.png" alt="" />
+					</figure>
+					<div class="profile__info-wrapper">
+						<span class="profile__name">Andrey Esin</span>
+						<span class="profile__location" id="js_profile_city">Moscow</span>
+					</div>
+				</div>
+				<div class="profile__likes">
+					<span>2,719</span>
+				</div>
+				<div class="profile__subscribers">
+					<span>5,386</span>
+				</div>
+				<div class="profile__watches">
+					<span>24,953</span>
+				</div>
+			</div>
+				<div class="widjet clock">
+					<h1 class="widjet__title widjet__title_left widjet__title_btn">Time is Money!
+						<button class="add__btn" type="button" name="button">+</button>
+					</h1>
+					<div class="clock__wrapper">
+						<div class="clock__display">
+							    <span class="clock__hour-wrap"><span class="clock__hour">00</span><span class="clock__text">hour</span></span> :
+    							<span class="clock__min-wrap"><span class="clock__min">00</span><span class="clock__text">min</span></span> :
+    							<span class="clock__sec-wrap"><span class="clock__sec">00</span><span class="clock__text">sec</span></span>
+                            </script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/pubsub.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/video.js"></script>
+		<script src="js/tasks.js"></script>
+		<script src="js/status.js"></script>
+		<script src="js/clock.js"></script>
+	</body>
+</html>

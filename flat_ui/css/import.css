@@ -1,0 +1,14 @@
+@import url(normalize.css);
+@import url(style.css);
+@import url('https://fonts.googleapis.com/css?family=Signika:300,400,600,700');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?22huuw');
+  src:  url('../fonts/icomoon.eot?22huuw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?22huuw') format('truetype'),
+    url('../fonts/icomoon.woff?22huuw') format('woff'),
+    url('../fonts/icomoon.svg?22huuw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
