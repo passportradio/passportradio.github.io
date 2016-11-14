@@ -1,0 +1,260 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1024px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 945px) {
+    .main-header__navigation {
+        width: 100%;
+        text-align: right;
+    }
+
+    .main-header__cons-btn {
+        margin-top: 0;
+    }
+
+    .preview__consultation-btn {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width : 845px) {
+    .approch__step-description {
+        padding-top: 5.5%;
+    }
+
+    .approch__step_right .approch__step-description {
+        padding-top: 5.5%;
+    }
+
+    .preview__consultation-btn {
+        width: 60%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .about-us__article {
+        width: 100%;
+        padding: 0 15% 50px;
+    }
+
+    .about-us__article:last-child {
+        padding-bottom: 0;
+    }
+
+    .approch {
+        margin: 0 -15px;
+    }
+
+    .approch__step {
+        float: left;
+        width: 46%;
+        margin: 0 2% 26px;
+    }
+
+    .approch__step_right .approch__step-item,
+    .approch__step-item {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    .approch__image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .approch__image:hover .approch__step-item,
+    .approch__image:hover .approch__step_right .approch__step-item{
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    .approch__step-description,
+    .approch__step_right .approch__step-description {
+        max-width: 100%;
+        float: none;
+        padding: 20px;
+    }
+
+    .approch__step-description p,
+    .approch__step_right  .approch__step-description p {
+        text-align: justify;
+        margin: 0
+    }
+
+    .approch__step-description h4,
+    .approch__step_right  .approch__step-description h4 {
+        text-align: center;
+    }
+
+    .works__item {
+        position: relative;
+        width: 50%;
+        height: inherit;
+    }
+
+    .works__item:hover .works__name {
+        opacity: .85;
+    }
+
+    .works__name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity .5s;
+        padding: 120px 0 0;
+    }
+
+    .works__preview {
+        width: 100%;
+    }
+
+    .works__preview img{
+        width: 100%;
+        display: block;
+    }
+
+    .section-title {
+        padding: 0 80px;
+    }
+
+
+    .preview__consultation-btn {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width : 510px) {
+
+    .approch {
+        margin: 0;
+    }
+
+    .approch__step {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .works__list {
+        margin: 0;
+    }
+
+    .works__item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 26px;
+    }
+
+    .works__item:last-child {
+        margin-bottom: 26px;
+    }
+
+    .main-header__logo{
+        margin-bottom: 18px;
+        width: 100%;
+        float: none;
+    }
+
+    .main-header__logo img{
+        margin: 0 auto;
+    }
+
+    .main-header__cons-btn {
+        display: none;
+    }
+
+    .main-header__navigation {
+        text-align: center;
+    }
+
+    .navigation__item:first-child {
+        margin-left: 0;
+    }
+
+    .navigation__item {
+        white-space: nowrap;
+    }
+
+    .section-title {
+        padding: 0;
+    }
+
+    .preview__consultation-btn {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 440px) {
+    .main-header__navigation {
+        position: relative;
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        width: 100%;
+        display: none;
+    }
+
+    .main-header__small-menu {
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .preview__consultation-btn {
+        width: 100%;
+    }
+
+    .navigation__item {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        color: #fff;
+        background: #de2b24;
+        border-radius: 5px;
+        margin-bottom: 1px;
+        cursor: pointer;
+    }
+
+    .main-header__navigation .navigation__item:after {
+        display: none;
+    }
+
+    .navigation__item:hover,
+    .navigation__item:active,
+    .navigation__item_active {
+        color: #424242;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input[type="submit"] {
+        width: 65%;
+        margin: 0 17.5%;
+    }
+
+    .form-subscribe__email {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .form-subscribe__submit {
+        width: 100%;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
