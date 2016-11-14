@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Page Billing</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+<meta name = "format-detection" content = "telephone=no" />
+<!--[Условие для ie!]>
+<script type="text/javascript" src="js/html5_elements.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css"/>
+<![endif]-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/window_pay.js"></script>
+</head>
+<body>
+<div class="container">
+
+	<header class="content-top">
+		<div class="content-top-left-wrapper">
+			<div class="content-top-button-navigation"></div>
+			<h1 class="content-top-caption">Магазин</h1>
+		</div>
+		<div class="side-switcher">
+			<span class="side-switcher-title">Reccurement payment</span>
+			<input class="side-switcher-input" type="checkbox" id="toggle"/>
+			<label class="side-switcher-toggle" for="toggle"></label>
+		</div>
+	</header>
+
+	<section class="billing-form">
+		<div class="billing-form-wrapper">
+			<section class="billing-form-left">
+				<header class="licenses-info">
+					<div class="licenses-info-number">
+						<span class="licenses-info-number-of">55 of 53</span>
+						<span class="licenses-info-number-desc">licenses used</span>
+					</div>
+					<span class="licenses-info-number-active-till">Active till 15 Sept 2014</span>
+				</header>
+				<section class="buy-licenses">
+					<div class="buy-licenses-wrapper clearfix">
+						<h3 class="buy-licenses-caption">Buy more licenses:</h3>
+						<div class="buy-licenses-calc">
+							<div class="buy-licenses-calc-decr"  id="delLisenses">-</div>
+							<span  class="buy-licenses-calc-num" id="costLisenses">3</span>
+							<div class="buy-licenses-calc-add" id="addLisenses">+</div>
+							<span class="buy-licenses-calc-multiply">x</span>
+							<span class="buy-licenses-calc-total">$15/mo</span>
+						</div>
+					</div>
+					<div class="buy-licenses-border">
+						<span class="buy-licenses-offer">
+							Buy 2 more licenses and save $10
+						</span>
+					</div>
+				</section>
+				<section class="subscription">
+					<h3 class="subscription_caption">Extend subscription:</h3>
+					<div class="subscription_choose">
+						<div class="subscription_time">
+							<div class="subscription_time_term">none</div>
+							<input data-checked="1" id="time_active_1" type="radio" name="chek"/>
+							<label for="time_active_1"></label>
+							<span data-salesmonth="0" class="subscription_time_off">$0 off</span>
+							<span data-totalmonth="1" class="subscription_time_total">$45</span>
+						</div>
+						<div class="subscription_time">
+							<span class="subscription_time_term">6 months</span>
+							<input data-checked="2" id="time_active_2" type="radio" name="chek"/>
+							<label for="time_active_2"></label>
+							<span data-salesmonth="10" class="subscription_time_off">$30 off</span>
+							<span data-totalmonth="6" class="subscription_time_total">$270</span>
+						</div>
+						<div class="subscription_time ">
+							<span class="subscription_time_term">9 months</span>
+							<input data-checked="3" id="time_active_3" type="radio" name="chek" checked/>
+							<label for="time_active_3"></label>
+							<span data-salesmonth="15" class="subscription_time_off">$45 off</span>
+							<span data-totalmonth="9" class="subscription_time_total">$405</span>
+						</div>
+						<div class="subscription_time">
+							<span class="subscription_time_term">1 year</span>
+							<input data-checked="4" id="time_active_4" type="radio" name="chek"/>
+							<label for="time_active_4"></label>
+							<span data-salesmonth="20" class="subscription_time_off">$60 off</span>
+							<span data-totalmonth="12" class="subscription_time_total">$540</span>
+						</div>
+						<div class="subscription_time">
+							<span class="subscription_time_term">2 year</span>
+							<input data-checked="5" id="time_active_5" type="radio" name="chek"/>
+							<label for="time_active_5"></label>
+							<span data-salesmonth="25" class="subscription_time_off">$75 off</span>
+							<span data-totalmonth="24" class="subscription_time_total">$1080</span>
+						</div>
+						<div class="subscription_choose-border"></div>
+					</div>
+				</section>
+			</section>
+		</div>
+		<aside class="billing-form-right">
+			<div class="additional">
+				<table class="additional-table">
+					<caption class="additional-caption">Additional licenses</caption>
+					<tr class="additional-special-price">
+						<td class="additional-special-price-name">5 special price</td>
+						<td class="additional-special-price-cash">$4.99</td>
+					</tr>
+					<tr class="additional-price-regular">
+						<td class="additional-price-regular-name">3 regular</td>
+						<td class="additional-price-regular-cash">$6.99</td>
+					</tr>
+					<tr class="additional-summary">
+						<td class="additional-summary-name">Summary:</td>
+						<td class="additional-summary-total">8 licenses</td>
+					</tr>
+					<tr class="additional-cost-one">
+						<td  colspan="2" class="additional-price-total">x $5,98/mo</td>
+					</tr>
+					<tr class="additional-days">
+						<td  colspan="2" class="additional-days-tiil">x 57 days (till 15 Sep 2014)</td>
+					</tr>
+					<tr class="additional-total">
+						<td  colspan="2" class="additional-total-number">$69.99</td>
+					</tr>
+				</table>
+			</div>
+			<div class="extension">
+				<table class="extension-table">
+					<caption class="extension-caption">Extension</caption>
+					<tr class="extension-subscription-date">
+						<td class="extension-subscription-date">1 year
+						</td>
+						<td class="extension-subscription-date-till">(till 15 Sep 2015)</td>
+					</tr>
+					<tr class="extension-licenses">
+						<td colspan="2" class="extension-licenses-number">x 55 licenses</td>
+					</tr>
+					<tr class="extension-total">
+						<td colspan="2" class="extension-total-number">$69.99</td>
+					</tr>
+				</table>
+			</div>
+			<div class="total">
+				<span class="total-caption">Total:</span>
+				<span class="total-result" id="totalResult">$1 200.99</span>
+				<span class="total-off">$359.98 off</span>
+				<label for="coupone" class="total-coupone">i have a coupone
+					<input id="coupone" class="total-coupone-input" type="checkbox" >
+					<input id="coupone-input" class="total-coupone-value" type="text" placeholder="Coupone code">
+				</label>
+				<input id="openWindowPay" class="total-proceed-submit" type="submit" value="proceed to checkout"/>
+			</div>
+		</aside>
+	</section>
+
+	<footer class="orders-wrapper">
+		<table class="recent-orders">
+			<caption class="recent-orders-title">Your recent orders</caption>
+			<tr class="recent-orders-item">
+				<td class="order-info">
+					<span  class="order-info-number">#884111</span>
+					<span  class="order-info-date">06.09.2013 18:17</span>
+				</td>
+				<td class="order-cost">
+					<span class="order-cost-span">$1 200.99</span>
+				</td>
+				<td class="order-details">
+					<span class="order-details-status">Panding</span>
+				</td>
+				<td class="order-receipt">
+					<a class="order-receipt-doc" href=""></a>
+					<span class="order-receipt-name">Receipt</span>
+				</td>
+				<td class="order_invoce">
+					<a class="order-invoce-doc" href=""></a>
+					<span class="order-invoce-name">Invoice</span>
+				</td>
+				<td class="order-proceed">
+					<input class="order-proceed-button" type="submit" value="proceed to checkout"/>
+				</td>
+			</tr>
+			<tr class="recent-orders-item">
+				<td class="order-info">
+					<span  class="order-info-number">#884111</span>
+					<span  class="order-info-date">06.09.2013 18:17</span>
+				</td>
+				<td class="order-cost">
+					<span class="order-cost-span">$1 200.99</span>
+				</td>
+				<td class="order-details">
+					<span class="order-details-status">Paid</span>
+					<span class="order-details-date">06.09.2010</span>
+				</td>
+				<td class="order-receipt">
+					<a class="order-receipt-doc" href=""></a>
+					<span class="order-receipt-name">Receipt</span>
+				</td>
+				<td class="order_invoce">
+					<a class="order-invoce-doc" href=""></a>
+					<span class="order-invoce-name">Invoice</span>
+				</td>
+				<td class="order-proceed">
+					<input class="order-proceed-button paid" type="submit" value="proceed to checkout"/>
+				</td>
+			</tr>
+			<tr class="recent-orders-item">
+				<td class="order-info">
+					<span  class="order-info-number">#884111</span>
+					<span  class="order-info-date">06.09.2013 18:17</span>
+				</td>
+				<td class="order-cost">
+					<span class="order-cost-span">$1 200.99</span>
+				</td>
+				<td class="order-details">
+					<span class="order-details-status">Paid</span>
+					<span class="order-details-date">06.09.2010</span>
+				</td>
+				<td class="order-receipt">
+					<a class="order-receipt-doc" href=""></a>
+					<span class="order-receipt-name">Receipt</span>
+				</td>
+				<td class="order_invoce">
+					<a class="order-invoce-doc" href=""></a>
+					<span class="order-invoce-name">Invoice</span>
+				</td>
+				<td class="order-proceed">
+					<input class="order-proceed-button paid" type="submit" value="proceed to checkout"/>
+				</td>
+			</tr>
+		</table>
+	</footer>
+</div>
+<div class="pay-window">
+	<div class="pay-window-left">
+		<div>
+			<h2 class="pay-window-left-caption">Credit Card Details:</h2>
+			<form class="card-data" action="#" method="get" name="card-details">
+				<label class="me-data-card">
+					<input class="me-data-card-input" type="radio" name="select-card" value="1" checked/>
+					<span>MC****9668</span>
+				</label>
+				<div class="card-data-new">
+					<label class="card-data-new-card">
+						<input class="card-data-new-card-input" type="radio" name="select-card" value="2"/>
+						<span>New card</span>
+					</label>
+					<label class="save-new-card">
+						<input type="checkbox"/>
+						<span>Save</span>
+					</label>
+				</div>
+				<div class="newDataCard">
+					<input class="card-data-number" type="text" placeholder="Number"/>
+					<input class="card-data-name" type="text" placeholder="Name on card"/>
+					<div class="card-data-details">
+						<input class="card-data-month" type="text" placeholder="MM"/>
+						<input class="card-data-year" type="text" placeholder="YY"/>
+						<input class="card-data-cvv" type="text" placeholder="CVV"/>
+						<i class="card-data-cvv-icon"></i>
+					</div>
+					<label class="reccurement-payment">
+						<input type="checkbox"/>
+						<span>Do a reccurement payment</span>
+					</label>
+				</div>
+				<input class="card-data-btn-checkout" type="submit" value="checkout"/>
+				<input class="card-data-btn-paypal" type="submit" value=""/>
+			</form>
+		</div>
+	</div>
+	<div class="pay-window-total">
+		<span class="pay-window-total-caption">Total:</span>
+		<span class="pay-window-total-result">$1 200.99</span>
+		<span class="pay-window-total-off">$359.98 off</span>
+	</div>
+	<button class="pay-window-close"></button>
+</div>
+<div class="modal-window"></div>
+</body>
+</html>

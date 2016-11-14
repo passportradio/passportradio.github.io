@@ -1,0 +1,806 @@
+/* RESET */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,button { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal; }
+ul,ol { list-style: none; }
+fieldset,img { border: none; }
+caption,th { text-align: left; }
+table { border-spacing: 0; }
+button{
+}
+input[type="submit"]{
+  -webkit-appearance: none;
+   box-shadow:0 2px 1px 0px #bbb;
+}
+body{
+	font-family:PT Sans,Calibry, sans-serif;
+    font-size:0.9em;
+	background-color:#E9EAEE;
+	line-height: 1.2;
+    color:#313942;
+	}
+label{
+    cursor:pointer;
+}
+th,td { padding:0; margin:0; vertical-align:baseline;}
+.container{
+    width:100%;
+    height:100%;
+    padding:30px;
+    box-sizing:border-box;
+    background:#E9EAEE;
+    min-width:960px;
+    margin:0 auto;
+}
+    .content-top{
+        height:50px;
+        overflow:hidden;
+        position:relative;
+    }
+        .content-top-button-navigation{
+            display:inline-block;
+            width:19px;
+            height:17px;
+            background:url("../images/icon/menu.png") no-repeat center;
+            margin-right:5px;
+            cursor:pointer;
+
+        }
+        .content-top-caption{
+            display:inline-block;
+            line-height:20px;
+            vertical-align:baseline;
+            font-size:24px;
+        }
+            .side-switcher{
+                width:300px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+                .side-switcher-title{
+                    margin-right:10px;
+                    line-height:20px;
+                    vertical-align:bottom;
+                    font-size:18px;
+                    line-height:30px;
+                    vertical-align:30px;
+                }
+                .side-switcher-input{
+                    display:none;
+                }
+                .side-switcher-toggle{
+                    float:right;
+                    width:50px;
+                    height:28px;
+                    border-radius:30px;
+                    background-color:#71c114;
+                    border:1px solid transparent;
+                    position:relative;
+                    cursor:pointer;
+                    -webkit-transition:all 0.5s;
+                            transition:all 0.5s;
+                }
+                .side-switcher-toggle:before{
+                    display:block;
+                    content:'';
+                    width:28px;
+                    height:28px;
+                    border-radius:100%;
+                    position:absolute;
+                    top:0;
+                    left:22px;
+                    background-color:white;
+                    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+                    -webkit-transition:all 0.5s;
+                            transition:all 0.5s;
+                }
+                .side-switcher-input:checked + .side-switcher-toggle:before{
+                    left:0;
+                }
+                .side-switcher-input:checked + .side-switcher-toggle{
+                    background:#ccc;
+                }
+    .billing-form{
+        overflow:hidden;
+        background:#fff;
+        min-height:620px;
+        margin-bottom:30px;
+    }
+        .billing-form-wrapper{
+                float:left;
+                margin-right:-300px;
+                width:100%;
+                box-sizing:border-box;
+            }
+            .billing-form-left{
+                margin-right:300px;
+                padding:25px 30px;
+                box-sizing:border-box;
+                background:#fff;
+            }
+                .licenses-info{
+                    border-bottom:1px solid #f4f4f5;
+                }
+                    .licenses-info-number,
+                    .buy-licenses-caption,
+                    .subscription_caption{
+                        font-size:24px;
+                        color:#313942;
+                    }
+                    .licenses-info-number{
+                        margin-bottom:5px;
+                    }
+                    .licenses-info-number-of{
+                        color:#f37575;
+                    }
+                    .licenses-info-number-desc{
+                    }
+                    .licenses-info-number-active-till{
+                        font-size:15px;
+                    }
+                .buy-licenses{
+                    padding:45px 0 20px;
+                    border-bottom:1px solid #f4f4f5;
+                }
+                    .buy-licenses-wrapper{
+                        margin-bottom:20px;
+                    }
+                    .buy-licenses-caption{
+                        display:inline-block;
+                        float:left;
+                        line-height: 36px;
+                    }
+                        .buy-licenses-calc{
+                            display:inline-block;
+                            float:right;
+                            font-size:18px;
+                        }
+                            .buy-licenses-calc-add,
+                            .buy-licenses-calc-decr{
+                                display:inline-block;
+                                line-height:36px;
+                                width:36px;
+                                height:36px;
+                                border-radius:3px;
+                                text-align:center;
+                                vertical-align: middle;
+                                font-size:0;
+                                border:1px solid #dfdfdf;
+                                background:#f8f9fa;
+                                cursor:pointer;
+                                box-shadow:0 1px 1px 0px #bbb;
+																-webkit-user-select: none;
+																user-select: none;
+
+                            }
+                            .buy-licenses-calc-add:active,
+                            .buy-licenses-calc-decr:active{
+                                box-shadow:inset 0 1px 1px 0px #bbb;
+
+                            }
+                            .buy-licenses-calc-add{
+                                background:#f8f9fa url("../images/icon/plus.png") no-repeat center;
+                            }
+                            .buy-licenses-calc-decr{
+                                background:#f8f9fa url("../images/icon/minus.png") no-repeat center;
+                            }
+                            .buy-licenses-calc-num{
+                                display:inline-block;
+                                text-align:center;
+                                width: 30px;
+                                line-height:37px;
+                                vertical-align: middle;
+                            }
+                            .buy-licenses-calc-multiply{
+                                display:inline-block;
+                                width:7px;
+                                height:7px;
+                                margin:0 15px;
+                                font-size:0;
+                                line-height:37px;
+                                vertical-align: middle;
+                                background:#f8f9fa url("../images/icon/multiply.png") no-repeat center;
+                            }
+                            .buy-licenses-calc-total{
+                                vertical-align: middle;
+                            }
+                        .buy-licenses-border{
+                            display:block;
+                            text-align:center;
+                            height:50px;
+                            border:3px solid #e3ecd9;
+                            border-radius:2px;
+                            position:relative;
+                            color:#9a9ea6;
+                        }
+                        .buy-licenses-border:before{
+                            display:block;
+                            content:"";
+                            width:5px;
+                            height:5px;
+                            border-left:3px solid #e3ecd9;
+                            border-top:3px solid #e3ecd9;
+                            background:white;
+                            position:absolute;
+                            top:-6px;
+                            right:118px;
+                            -webkit-transform:rotate(45deg);
+                                    transform:rotate(45deg);
+                        }
+                        .buy-licenses-border:after{
+                            display:block;
+                            content:"";
+                            width:20px;
+                            height:40px;
+                            border-left:3px solid #e3ecd9;
+                            background:white;
+                            position:absolute;
+                            top:25px;
+                            right:-6px;
+                            -webkit-transform:rotate(45deg);
+                                    transform:rotate(45deg);
+                        }
+                            .buy-licenses-offer{
+                                line-height:50px;
+                                font-size:18px;
+                                color:#676e79;
+                            }
+                .subscription{
+                    padding:30px 0;
+                }
+                    .subscription_caption{
+                        margin-bottom:25px;
+                    }
+                    .subscription_choose{
+                        width:100%;
+                        position:relative;
+                    }
+                     .subscription_choose:after{
+                        display:block;
+                        content:"";
+                        height:6px;
+                        width:80%;
+                        background:#f5f5f5;
+                        position:absolute;
+                        top:50%;
+                        left:10%;
+                        margin-top:-7px;
+                    }
+                    .subscription_time{
+                        display:inline-block;
+                        width:20%;
+												height:113px;
+                        margin-left:-4px;
+                        text-align:center;
+                        position:relative;
+                    }
+						.subscription_time input{
+							display:none;
+						}
+						.subscription_time label{
+    						display:block;
+    						width:100%;
+    						height:100%;
+    						position:absolute;
+                            margin-top:-25px;
+    						border-radius:100%;
+                            z-index:10;
+                            cursor:pointer;
+						}
+						  .subscription_time input:checked + label:after{
+							border: 2px solid #749e42;
+                            z-index: 100;
+                            height:30px;
+                            width:30px;
+                            margin-left:-15px;
+                            margin-top:-17px;
+                            background: #fff url("../images/icon/checked.png") no-repeat center;
+    					   }
+										
+					.subscription_time label:after{
+                        display:block;
+                        content:"";
+                        height:22px;
+                        width:22px;
+                        border-radius:100%;
+                        background:#f5f5f5;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        margin-left:-11px;
+                        margin-top:-11px;
+                    }
+                    .subscription_time:first-child{
+                        margin-left:0px;
+                        vertical-align:top;
+                    }
+                    .subscription_time:first-child span{
+                        visibility:hidden;
+                    }
+                    .subscription_time span{
+                        display:block;
+                    }
+                    .subscription_time_term{
+                        font-size:18px;
+                        color:#313942;
+                    }
+                    .subscription_time_plate{
+                        margin-bottom:50px;
+                    }
+                    .subscription_time_off{
+                        padding-top: 60px;
+                        color:#749e42;
+                    }
+                    .subscription_choose-border{
+                        width:100px;
+                        height:140px;
+                        border:2px solid #749e42;
+                        position:absolute;
+                        top:0;
+                        left:50%;
+                        z-index:50;
+                        margin-left:-52px;
+                        margin-top:-12px;
+                        -webkit-transition:left 0.5s;
+						        transition:left 0.5s;
+                    }
+            .billing-form-right{
+                float:right;
+                width:300px;
+                padding:25px 20px;
+                box-sizing:border-box;
+                background:#eee;
+                min-height:620px;
+                position:relative;
+            }
+
+
+                .additional{
+                    border-bottom:1px dotted #e1e2e3;
+                    padding-bottom:20px;
+                }
+                    .additional-caption{
+                        margin-bottom:10px;
+                    }
+                        .additional-table{
+                            width:100%;
+                            color:#676e79;
+                            font-size:15px;
+                        }
+                        .additional-special-price td,
+                        .additional-price-regular td{
+                            padding-bottom:15px;
+                        }
+                        .additional-summary td{
+                            padding-bottom:10px;
+                        }
+                        .additional-cost-one td{
+                            padding-bottom:5px;
+                        }
+                        .additional-total td{
+                            padding-top:15px;
+                        }
+                            .additional-caption,
+                            .extension-caption{
+                                color:#2e3640;
+                            }
+                            .additional-special-price-cash,
+                            .additional-price-regular-cash,
+                            .additional-summary-total,
+                            .additional-price-total,
+                            .additional-days-tiil,
+                            .additional-total-number{
+                                text-align:right;
+                            }
+                           .additional-total-number{
+                                font-size:24px;
+                            }
+
+
+
+
+
+
+                .extension{
+                    margin-bottom:220px;
+                }
+                    .extension-table{
+                        width:100%;
+                        color:#676e79;
+                    }
+                        .extension-caption{
+                            margin:10px 0;
+                        }
+                        .extension-subscription-date-till,
+                        .extension-licenses td,
+                        .extension-total td{
+                            text-align:right;
+                        }
+                        .extension-subscription-date td{
+                            padding-bottom:10px;
+                        }
+                        .extension-total td{
+                            padding-top:15px;
+                            font-size:24px;
+                        }
+                .total{
+                    height:240px;
+                    box-sizing:border-box;
+                    position:absolute;
+                    bottom:0;
+                }
+                    .total-caption,
+                    .total-result,
+                    .total-off,
+                    .total-proceed-submit{
+                        display:block;
+                        margin-bottom:5px;
+                    }
+                    .total-caption{
+                        font-size:18px;
+                        margin-top: 10px;
+                    }
+                    .total-result{
+                        font-size:46px;
+                        color:#158fd2;
+                    }
+                    .total-off{
+                        font-size:18px;
+                        color:#8eaf66;
+                        margin-bottom: 10px;
+                    }
+                    .total-coupone{
+                        font-size:13px;
+                        color:#92989b;
+                        border-bottom:1px dotted;
+                        cursor:pointer;
+                    }
+                    .total-coupone-input{
+                        display:none;
+                    }
+                    .total-coupone-value{
+                        display:block;
+                        height:0;
+                        width:260px;
+                        padding:0 5px;
+                        box-sizing:border-box;
+                        position:relative;
+                        outline:0;
+                        top:-20px;
+                        visibility:hidden;
+                        border-radius:3px;
+                        border:1px solid #bbb;
+                        font-size:13px;
+                        color:#92989b;
+                        -webkit-transition:height 0.3s;
+                                transition:height 0.3s;
+                    }
+                    .total-coupone-input:checked + input{
+                        height:30px;
+                        visibility:visible;
+                    }
+                    .total-proceed-submit{
+                        width:260px; /*как сделать во всю ширину родителя?*/
+                        padding:15px 0;
+                        margin-bottom:0;
+                        background:#1b94d7;
+                        border:1px solid #197cb3;
+                        border-radius:3px;
+                        font-size:16px;
+                        color:white;
+                        text-transform:uppercase;
+                        position:absolute;
+                        bottom:30px;
+                        cursor:pointer;
+                    }
+    .orders-wrapper{
+    }
+        .recent-orders{
+            width:100%;
+            color:#676e79;
+        }
+            .recent-orders-title{
+                color:#676e79;
+            }
+            .recent-orders tr:first-child td{
+                border-top:0;
+            }
+            .recent-orders tr  td{
+                border-top:1px solid #ddd;
+            }
+            .recent-orders td:not(.order-proceed){
+                font-size:15px;
+            }
+            .recent-orders-title{
+                font-size:18px;
+            }
+            .recent-orders-item td{
+                padding:18px 0 5px;
+            }
+            .order-receipt,
+            .order_invoce{
+                vertical-align:middle;
+                line-height:42px;
+                color:#313942;
+            }
+                .order-details-status,
+                .order-details-date,
+                .order-info-number,
+                .order-info-date{
+                    display:block;
+                }
+                .order-info,
+                .order-cost,
+                .order-details{
+                    color:#676e79;
+                }
+            .order-receipt-doc,
+            .order-invoce-doc{
+                display:inline-block;
+                width:32px;
+                height:42px;
+                margin-right:6px;
+                background:url("../images/icon/pdf_doc.png") no-repeat center;
+            }
+            .order-receipt-name,
+            .order-invoce-name{
+							vertical-align:top;
+            }
+						@media (-webkit-min-device-pixel-ratio: 2) {
+							.order-receipt-doc,
+              .order-invoce-doc{
+								background-image: url(../images/icon/pfd_doc_retina.png);
+								background-size: cover;
+								}
+						}
+            .order-proceed{
+                text-align:right;
+                width:300px;
+            }
+            .order-proceed input{
+                width:158px;
+                height:37px;
+                background:#1b94d7;
+                font-size:11px;
+                margin-bottom:0;
+                background:#1b94d7;
+                border:1px solid #197cb3;
+                border-radius:3px;
+                color:white;
+                text-transform:uppercase;
+                cursor:pointer;
+            }
+            .order-proceed .paid{
+                display:none;
+            }
+
+.modal-window{
+    display:block;
+    width:100%;
+    height:100%;
+    background:white;
+    opacity:0.8;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+}
+.modal-window,
+.pay-window{
+    display:none;
+    opacity:0;
+}
+.modal-window.open,
+.pay-window.open{
+    display:block;
+}
+    .pay-window{
+        width:642px;
+        background:#f5f5f5;
+        top:50%;
+        left:50%;
+        margin-left:-321px;
+        margin-top:-275px;
+        z-index:100000;
+        border:1px solid #d2d5d6;
+        position:fixed;
+        box-sizing:border-box;
+        box-shadow:0px 2px 15px 1px rgba(0,0,0,0.1);
+    }
+        .pay-window-close{
+            width:12px;
+            height:12px;
+            position:absolute;
+            top:20px;
+            right:20px;
+            border:none;
+            background:url("../images/icon/btn-win-close.png");
+            cursor:pointer;
+            box-shadow:none;
+        }
+        .pay-window-close:active{
+            border:none;
+            outline:none;
+        }
+        .pay-window-left{
+            float:left;
+            width:385px;
+            height:100%;
+            background:white;
+            font-size:18px;
+            padding:30px;
+            box-sizing:border-box;
+            color:#313942;
+        }
+            .pay-window-left-caption{
+                font-size:24px;
+                margin-bottom: 25px;
+            }
+                .card-data input[type="radio"],
+                .card-data input[type="checkbox"]{
+                    display:none;
+                    position:relative;
+                }
+                .card-data input[type="radio"] + span:before{
+                    display:block;
+                    content:"";
+                    width:18px;
+                    height:18px;
+                    border:1px solid #e9e9e9;
+                    position:absolute;
+                    top:50%;
+                    left:-30px;
+                    margin-top:-10px;
+                    border-radius:100%;
+                    box-shadow:inset 0px 0px 0px 5px #fff;
+                }
+                .card-data input[type="radio"]:checked + span:before{
+                    background:#000;
+                }
+                    .card-data-new{
+                        margin:15px 0;
+                    }
+                    .save-new-card{
+                        float:right;
+                    }
+                    .card-data input{
+                        border-radius:3px;
+                    }
+                    .me-data-card,
+                    .card-data-new-card,
+                    .reccurement-payment{
+                        position:relative;
+                        margin-left:30px;
+                    }
+                    .reccurement-payment{
+                        margin-left:30px;
+                    }
+                    .save-new-card,
+                    .reccurement-payment span{
+                        position:relative;
+                    }
+                    .card-data input[type="checkbox"] + span:before{
+                        display:block;
+                        content:"";
+                        width:18px;
+                        height:18px;
+                        border:1px solid #e9e9e9;
+                        position:absolute;
+                        top:50%;
+                        left:-30px;
+                        margin-top:-10px;
+                        border-radius:3px;
+                    }
+                    .card-data input[type="checkbox"]:checked + span:before{
+                        background:url("../images/icon/checked.png") no-repeat center;
+                        background:clip;
+                    }
+                    .card-data-number,
+                    .card-data-name{
+                        padding: 12px;
+                        margin-bottom: 10px;
+                        border:1px solid #e8e8e8;
+                    }
+                    .card-data-number,
+                    .card-data-name,
+                    .card-data input[type="submit"]{
+                        display:block;
+                        height: 50px;
+                        width:100%;
+                        box-sizing: border-box;
+                        border-radius:5px;
+                        padding: 10px;
+                        font-size: 18px;
+
+                    }
+                    .card-data-cvv,
+                    .card-data-month,
+                    .card-data-year{
+                        width: 50px;
+                        height: 50px;
+                        padding: 10px;
+                        text-align: center;
+                        box-sizing: border-box;
+                        margin:0;
+                        border:1px solid #e8e8e8;
+                        font-size: 18px;
+                    }
+                    .reccurement-payment{
+                        display:block;
+                        margin: 40px 0 30px 30px;
+                    }
+                    .card-data-cvv{
+                        float:right;
+                        width: 75px;
+                        position:relative;
+                    }
+                    .card-data-details{
+                        position:relative;
+                    }
+                    .card-data-cvv-icon{
+                        display:block;
+                        content:"";
+                        width:45px;
+                        height:29px;
+                        background:url("../images/icon/image-cvv.png") no-repeat center;
+                        position:absolute;
+                        top:55px;
+                        right:15px;
+                    }
+                    .card-data-btn-checkout{
+                        background:#1791d3;
+                        border:1px solid #197cb3;
+                        color:#fff;
+                        text-transform: uppercase;
+                        font-size:16px;
+                        margin-bottom:18px;
+                        cursor:pointer;
+                    }
+                    .card-data-btn-paypal{
+                        background:white;
+                        border:2px solid #5cbcf1;
+                        cursor:pointer;
+                        background:url("../images/icon/paypal.png") no-repeat center;
+                    }
+                    .card-data input[type="submit"].card-data-btn-paypal{
+                        box-shadow:none;
+                    }
+            .pay-window-total{
+                position:absolute;
+                bottom:0;
+                right:0;
+                width:255px;
+                padding: 20px;
+                box-sizing: border-box;
+                font-size:18px;
+            }
+                .pay-window-total-caption,
+                .pay-window-total-result,
+                .pay-window-total-off{
+                    display:block;
+                    margin-bottom:15px;
+                }
+                .pay-window-total-result{
+                    font-size:46px;
+                    color:#158fd2;
+                }
+                .pay-window-total-off{
+                    color:#8eaf66;
+                }
+
+                .card-data-btn-checkout:disabled{
+                    outline: none;
+                    background: #eee;
+                    color: #bbb;
+                    border: 1px solid #bbb;
+                }
+                
+/*------ CLEARFIX -----*/
+.clearfix:after,
+.clearfix:before{
+    display:table;
+    content:"";
+}
+.clearfix:after{
+    clear:both;
+}
