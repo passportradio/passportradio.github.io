@@ -1,0 +1,66 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin-left: 50px;
+}
+
+.title {
+    display: inline-block;
+    border-bottom: 3px solid #000;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+}
+
+.list {
+    display: table;
+    padding: 0;
+    margin: 20px 0 0 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.list li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.list li:hover a {
+    color: red;
+}
+
+
+.list a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    transition: color .3s;
+}
+
+.list a:focus {
+    outline: none;
+    color: red;
+}
+
+.list a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: top .5s, color .3s, opacity .5s;
+}
+
+.list a:hover:after {
+    top: 110%;
+    opacity: 1;
+}
+
+.list a:focus:after {
+    top: 110%;
+    opacity: 1;
+}
