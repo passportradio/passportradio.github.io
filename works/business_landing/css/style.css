@@ -54,6 +54,7 @@ body{
 .wrapper-preview  {
     background: #fff url(../images/slide.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .wrapper-about-us {
