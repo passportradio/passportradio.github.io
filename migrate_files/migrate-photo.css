@@ -339,6 +339,11 @@
     min-height: inherit;
     padding: 22px 40px;
   }
+  
+  .p-migrate-photo .сontent__body {
+    flex-shrink: 0;
+  }
+  
   .p-migrate-photo .сontent__body,
     .p-migrate-photo .aside-content {
     position: relative;
