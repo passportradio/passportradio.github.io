@@ -674,6 +674,7 @@
   }
   .p-migrate-photo .chart__dropdown-btn {
     position: relative;
+    height: 200px !important;
     font-size: 12px;
     font-weight: bold;
     text-align: left;
