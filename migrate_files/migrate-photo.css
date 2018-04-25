@@ -500,6 +500,10 @@
           align-items: flex-start;
 }
 
+.p-migrate-photo .сontent--migrate .сontent__body {
+  flex-shrink: 0;
+}
+
 .p-migrate-photo .сontent--migrate .сontent__body--center {
   margin-bottom: 60px;
 }
