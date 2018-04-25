@@ -1,0 +1,215 @@
+/* >>> file start: stc/widgets/rutos.css */
+/* ru tos jurisdiction (LJSUP-26494) */
+.flatblue.rutos {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5001;
+    width: 510px;
+    margin: -280px 0 0 -255px;
+    padding: 0;
+    font: 400 15px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+    background: #FFF !important;
+    color: #242F33 !important;
+    }
+/* head */
+.rutos .flatblue-head {
+        margin: 0;
+        padding: 15px 25px;
+        text-align: left;
+        background: #09C;
+        color: #FFF;
+        }
+.html-ie11 .rutos .flatblue-head {
+        padding: 18px 25px 12px;
+        }
+/* title */
+.rutos .flatblue-header {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font: 300 21px/1 'ProximaNova', Helvetica, Arial, sans-serif !important;
+            background: #09C;
+            color: #FFF;
+            }
+.rutos .flatblue-body {
+        margin: 0;
+        padding: 25px;
+        font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+        background: #FFF !important;
+        color: #242F33 !important;
+        }
+.rutos .flatblue-body::after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+/* intro */
+.rutos__intro {
+            margin: 0 0 15px;
+            padding: 0;
+            font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+            background: #FFF !important;
+            color: #242F33 !important;
+            }
+.rutos__intro A,
+            .rutos__intro A:link,
+            .rutos__intro A:visited {
+                border: 0 !important;
+                font: inherit !important;
+                text-decoration: none !important;
+                color: #00A3D9 !important;
+                }
+.rutos__intro A:hover,
+            .rutos__intro A:active {
+                border: 0 !important;
+                text-decoration: none !important;
+                color: #0086B3 !important;
+                }
+/* tos */
+.rutos__tos {
+            overflow: auto;
+            height: 130px;
+            margin: 0 0 15px;
+            padding: 0;
+            border-top: 1px solid #C3D3D9;
+            border-bottom: 1px solid #C3D3D9;
+            font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+            background: #FFF !important;
+            color: #242F33 !important;
+            }
+.tos2017 ol {
+    counter-reset: item;
+    margin: 1em 0 1em 1em;
+    padding: 0;
+}
+.tos2017 li {
+    display: block;
+    margin: 0 0 1em;
+}
+.tos2017 li::before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+.tos2017 li h4,
+                        .tos2017 li h5 {
+    display: inline-block;
+}
+.tos2017 p {
+    margin: 0 0 1em;
+}
+.tos2017 .tos2017__term {
+    margin: 1em 0 1em 1em;
+}
+.tos2017 table {
+    margin: 0 0 1em;
+}
+.tos2017 h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.tos2017 h4 {
+    margin: 0;
+    font-size: 1em;
+}
+.tos2017 h5 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+.rutos__tos OL {
+                margin: 0 0 1em 2em;
+                padding: 0;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos UL {
+                margin: 0 0 1em 2em;
+                padding: 0;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos LI {
+                margin: 0 0 0.5em;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos P {
+                margin: 0 0 1em;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos DIV {
+                margin: 0 0 1em;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos STRONG {
+                margin: 0;
+                font: 700 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__tos H3,
+            .rutos__tos H4 {
+                margin: 0 0 1em;
+                font: 700 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+/* checkbox */
+.rutos__checkbox {
+            margin: 0 0 15px;
+            background: #FFF !important;
+            color: #242F33 !important;
+            }
+.rutos__checkbox .custom--label {
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                }
+.rutos__checkbox .checkbox:focus + .custom--label::after {
+                display: none;
+                }
+/* bonus */
+.rutos__bonus {
+            margin: 0 0 15px;
+            padding: 0;
+            font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+            background: #FFF !important;
+            color: #242F33 !important;
+            }
+.rutos__message {
+                margin: 0 0 5px !important;
+                padding: 0 !important;
+                font: 400 13px/1.4 "ProximaNova",Helvetica,sans-serif !important;
+                background: #FFF !important;
+                color: #242F33 !important;
+                }
+/* actions */
+.rutos__actions {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            background: #FFF !important;
+            color: #242F33 !important;
+            }
+/* show rutos (add .p-rutos to BODY) */
+.p-rutos .rutos {
+    display: block;
+    }
+.p-rutos .b-fader {
+    display: block !important;
+    }
+/* change position fixed to absolute for short screens */
+@media screen and (max-width: 650px) {
+    .flatblue.rutos {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: auto !important;
+        margin: 0 !important;
+        }
+}
+
+/* <<< file end: stc/widgets/rutos.css */
+
+/*# map link was there [rutos.css.map] */

@@ -1,0 +1,378 @@
+/* >>> file start: stc/widgets/likes.css */
+/* list of users */
+.ljlikus-list {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F9FA;
+    list-style: outside none none;
+    box-sizing: border-box;
+    }
+.ljlikus__item {
+        padding: 10px 25px;
+        border-bottom: 1px solid #E2E9EC;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+.ljlikus__item:last-child {
+        border-bottom: 0;
+        }
+.ljlikus__item.ljlikus--more {
+        padding: 0;
+        }
+.ljlikus__item--more {
+        display: block;
+        position: relative;
+        padding: 10px 20px !important;
+        box-sizing: border-box;
+        font-family: 'ProximaNova', 'Helvetica', sans-serif;
+        font-weight: 600;
+        }
+/* Icon for preview full list */
+.b-bubble-likus-users .ljlikus__item--more::before {
+            display: block;
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            margin-top: -6px;
+            content: "";
+            background-image: url(/img/ljuser-medius.svg?v=64196);
+            background-position: -1px -1px;
+            background-repeat: no-repeat;
+            }
+.b-bubble-likus-users .ljlikus__item--more span {
+        padding: 23px;
+        }
+.ljlikus-action:hover .ljlikus-list {
+    display: block;
+    }
+.ljlikus-more__link {
+    position: relative;
+    display: inline-block;
+    height: 2.5ex;
+    padding-left: 18px;
+    text-transform: uppercase;
+    font-size: 14px;
+    }
+.ljlikus-more__link::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        content: "";
+        background-image: url(/img/userinfo_v3.svg?v=41686);
+        background-position: 0 0;
+        }
+.ljlikus-action,
+.ljlikus-button {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    }
+HTML BODY .ljlikus-action,
+HTML BODY .ljlikus-button,
+HTML BODY .ljlikus-action:hover,
+HTML BODY .ljlikus-button:hover,
+HTML BODY .ljlikus-button:focus,
+HTML BODY .ljlikus-action:focus,
+HTML BODY A.ljlikus-button,
+HTML BODY A.ljlikus-action,
+HTML BODY A.lilikus-button:hover,
+HTML BODY A.ljlikus-action:hover {
+    border: 0 !important;
+    text-decoration: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+    }
+/* icon */
+.ljlikus-button .flaticon--like {
+    width: 27px;
+    height: 25px;
+    vertical-align: middle;
+    stroke: #ABBBC2;
+    stroke-width: 2px;
+    fill: transparent;
+    }
+/*.ljlikus-button:hover .flaticon--like,*/
+.ljlikus--like-active .flaticon--like {
+    stroke: #FF4C44;
+    stroke-width: 2px;
+    fill: #FF4C44;
+    }
+/* counter */
+HTML BODY .ljlikus-counter {
+    text-decoration: none !important;
+    border: none !important;
+    }
+HTML BODY.ljlikus-bubble--full .ljlikus-bubble .ljlikus-counter {
+    font-size: 28px !important;
+    }
+/* bubble */
+.b-bubble-likus-users .b-popup-outer,
+.b-bubble-likus-users .b-popup-inner {
+    border-radius: 0;
+    padding: 0 !important;
+    }
+.b-bubble-likus-users .i-popup-arrt .i-popup-arr-brdr-outer,
+.b-bubble-likus-users .i-popup-arrtl .i-popup-arr-brdr-outer,
+.b-bubble-likus-users .i-popup-arrtr .i-popup-arr-brdr-outer {
+    border-bottom-color: #F7F9FA;
+    }
+.b-bubble-likus-users .i-popup-arrb .i-popup-arr-brdr-outer,
+.b-bubble-likus-users .i-popup-arrbl .i-popup-arr-brdr-outer,
+.b-bubble-likus-users .i-popup-arrbr .i-popup-arr-brdr-outer {
+    border-top-color: #F7F9FA;
+    }
+/* bubble full*/
+BODY.ljlikus-bubble--full {
+    overflow-y: hidden;
+    }
+.ljlikus-bubble {
+    display: none;
+    z-index: 5009;
+    position: fixed;
+    width: 640px;
+    max-height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -250px;
+    }
+.ljlikus-bubble .ljlikus__item {
+        text-overflow: initial;
+        }
+.ljlikus-bubble--full .ljlikus-bubble {
+        display: block;
+        }
+.ljlikus-bubble__header {
+        position: relative;
+        padding: 15px 20px 10px;
+        background-color: #F7F9FF;
+        font-size: 28px;
+        color: #2A3539;
+        }
+.ljlikus-bubble__close {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+            cursor: pointer;
+            }
+.ljlikus-bubble__close .flaticon--cross {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -8px;
+                margin-left: -8px;
+                }
+.ljlikus-bubble--full .ljlikus-counter {
+            color: #B9BEC3;
+            }
+.ljlikus-bubble__body {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 427px;
+        }
+.ljlikus-bubble--full .ljlikus-list--full {
+        display: block;
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        margin: 0;
+        }
+.ljlikus-bubble--full .ljlikus-list::after,
+    .ljlikus-bubble--full .ljlikus-list::before {
+        display: none;
+        }
+.ljlikus-bubble--full .ljlikus__item {
+            position: relative;
+            height: 66px;
+            padding: 5px 210px 5px 20px;
+            border-bottom: 0;
+            white-space: nowrap;
+            box-sizing: border-box;
+            }
+.ljlikus-bubble--full .ljlikus__item--more,
+        .ljlikus-bubble--full .ljlikus__item--loading {
+            min-height: 35px;
+            text-align: center;
+            }
+.ljlikus-bubble--full .ljlikus__item--more .b-flatbutton {
+                vertical-align: middle;
+                }
+.ljlikus-bubble--full .ljlikus__item--loading .svgpreloader-tag {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                }
+.ljlikus-bubble--full .ljlikus__item:nth-child(odd) {
+            background-color: #FFF;
+            }
+.ljlikus__item-userpic {
+            display: inline-block;
+            width: 50px;
+            margin-right: 3%;
+            vertical-align: middle;
+            text-align: center;
+            }
+.ljlikus__item-userpic IMG {
+            max-width: 50px;
+            max-height: 50px;
+            }
+.ljlikus__item-usertitle {
+            overflow: hidden;
+            display: block;
+            max-height: 36px;
+            padding-right: 35px;
+            margin: 0;
+            white-space: normal;
+            font-size: 13px;
+            color: #2A3539;
+            }
+.ljlikus__item-meta {
+            display: inline-block;
+            vertical-align: middle;
+            }
+.ljlikus__friends-wrap {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                padding-left: 20px;
+                -webkit-transform: translate(0, -50%);
+                    -ms-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                }
+.ljlikus__friends {
+                    min-width: 155px;
+                    }
+.ljlikus__friends--hide,
+                .ljlikus__friends--remove {
+                    display: none !important;
+                    }
+.ljlikus__friends--list-span {
+                    display: block;
+                    }
+.ljlikus__friends:hover .ljlikus__friends--list-span {
+                        display: none;
+                        }
+.ljlikus__friends:hover .ljlikus__friends--remove {
+                        display: block !important;
+                        }
+HTML BODY .ljlikus__item--more {
+            border: 0 !important;
+            }
+.ljlikus-bubble--full .b-fader {
+        display: block;
+        }
+.ljlikus-bubble .i-ljuser {
+        font-family: 'ProximaNova', Helvetica, sans-serif;
+        }
+/* Replaced from lj_base.css */
+/* username & journal link */
+/* LJSUP-25321 */
+BODY:not(.s-schemius) .ljlikus-bubble .i-ljuser-username {
+        margin-left: .1em;
+        font-size: 15px;
+        line-height: 18px;
+        color: #007399;
+        vertical-align: middle;
+        text-decoration: none;
+        }
+BODY:not(.s-schemius) .ljlikus-bubble .i-ljuser-username:hover {
+        text-decoration: none;
+        color: #0086B3;
+        }
+.html-ie11 BODY:not(.s-schemius) .ljlikus-bubble .i-ljuser-username {
+        position: relative;
+        top: -.15em;
+        }
+BODY:not(.s-schemius) .ljlikus-bubble .i-ljuser-profile {
+        vertical-align: middle;
+        }
+.l-mainpage .js--state-restored .ljlikus--like {
+    opacity: .2;
+    transition: all 0.2s ease 0s;
+    }
+/* hide on loginform (LJSUP-27958) */
+.p-loginform .b-bubble-likus-users {
+    display: none;
+    }
+@media all and (max-width: 650px) {
+    .ljlikus-bubble {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+        margin: auto;
+        }
+    .ljlikus-bubble__header {
+        font-size: 22px;
+        padding: 8px 15px 8px;
+        }
+        HTML BODY.ljlikus-bubble--full .ljlikus-bubble .ljlikus-counter {
+            font-size: 22px !important;
+            }
+    .ljlikus__item-userpic {
+        width: 40px;
+        }
+    .ljlikus__item-userpic IMG {
+        max-width: 40px;
+        max-height: 40px;
+        }
+    .ljlikus-bubble--full .ljlikus__item {
+        padding: 5px 230px 5px 20px;
+        }
+    }
+@media all and (max-height: 600px) {
+    .ljlikus-bubble {
+        top: 0;
+        margin-top: 0;
+        }
+    .ljlikus-bubble__header {
+        font-size: 24px;
+        }
+    }
+@media(max-width: 500px) {
+    .ljlikus-bubble--full .ljlikus__item {
+        height: auto;
+        min-height: 50px;
+        padding: 5px 15px 5px 15px;
+        }
+    .ljlikus__friends-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin: 10px 0;
+        padding: 0 0 0 50px;
+        text-align: left;
+        -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+                transform: translate(0, 0);
+        }
+    .ljlikus__item-usertitle {
+        max-width: 220px;
+        max-height: 70px;
+        }
+    }
+
+/* <<< file end: stc/widgets/likes.css */
+
+/*# map link was there [likes.css.map] */

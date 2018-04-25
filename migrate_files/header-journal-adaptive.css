@@ -1,0 +1,123 @@
+/* >>> file start: stc/schemius_v4/header-journal-adaptive.css */
+@media (max-width: 1400px) {
+    BODY .s-header-extra .s-header-extra-user__status {
+        max-width: 220px;
+        }
+}
+
+@media (max-width: 1290px) {
+    BODY .s-header-extra .appwidget-stylealwaysmine-label-adapt {
+        display: none;
+        }
+}
+
+@media (max-width: 800px) {
+    BODY .s-header-extra__user {
+        margin-right: 10px;
+        }
+    BODY .s-header-extra-user__dash,
+    BODY .s-header-extra-user__status {
+        display: none !important;
+        }
+}
+
+@media (min-width: 601px) {
+    BODY .s-header-extra__menu {
+        position: static;
+        display: block;
+        }
+        BODY .s-header-extra__menu:before {
+            content: none;
+            }
+}
+
+@media (max-width: 600px) {
+    BODY .s-header--own-journal .s-header-extra {
+        padding-right: 0;
+        }
+
+    BODY .s-header-extra__user {
+        margin-right: 0;
+        }
+
+    BODY .s-header-extra__menu-container {
+        float: right;
+        }
+        BODY .s-header--notown-journal .s-header-extra-menu {
+            position: absolute;
+            top: 54px;
+            right: -18px;
+            display: none;
+            }
+        BODY .s-header-extra:not(.s-header-extra--profile) .s-header-extra-menu {
+            height: auto;
+            }
+            BODY .s-header--notown-journal .s-header-extra-menu:before {
+                content: '\00a0';
+                }
+            BODY .s-header--notown-journal .s-header-extra__menu-icon {
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                }
+            BODY .s-header-extra:not(.s-header-extra--profile) .s-header-extra-menu-item,
+            BODY .s-header--community-journal .s-header-extra-menu-item,
+            BODY .s-header--user-status .s-header-extra-menu-item {
+                position: relative;
+                display: block;
+                margin: 0;
+                border-top: 1px solid #00394D;
+                }
+                BODY .s-header-extra:not(.s-header-extra--profile) .s-header-extra-menu-item:first-child,
+                BODY .s-header--community-journal .s-header-extra-menu-item:first-child,
+                BODY .s-header--user-status .s-header-extra-menu-item:first-child {
+                    border: 0;
+                    }
+                BODY .s-header-extra:not(.s-header-extra--profile) .s-header-extra-menu .s-header-extra-menu-item__link {
+                    display: block;
+                    padding: 0 15px;
+                    }
+                    BODY .s-header--notown-journal .s-header-extra-menu-item-link-text,
+                    BODY .s-header--community-journal .s-header-extra-menu-item-link-text,
+                    BODY .s-header--community-journal .s-header-extra-menu-item--write .s-header-extra-menu-item-link-text,
+                    BODY .s-header--user-status .s-header-extra-menu-item-link-text {
+                        display: inline;
+                        }
+                    BODY .s-header-extra:not(.s-header-extra--profile) .s-header-extra-menu-item-link-text {
+                        margin: 0;
+                        }
+                    BODY .s-header--notown-journal .s-header-extra-menu-item-link-icon,
+                    BODY .s-header--community-journal .s-header-extra-menu-item-link-icon,
+                    BODY .s-header--community-journal .s-header-extra-menu-item--write .s-header-extra-menu-item-link-icon,
+                    BODY .s-header--user-status .s-header-extra-menu-item-link-icon {
+                        display: none;
+                        }
+
+    .s-header-extra {
+        border-top: 1px solid #005673;
+        }
+    .s-header-extra--profile {
+        padding: 0;
+        }
+        .s-header-extra--profile .s-header-extra__menu:only-child {
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            }
+        .s-header-extra--profile .s-header-extra__menu:only-child::-webkit-scrollbar {
+            display: none;
+            }
+}
+
+@media (max-width: 390px) {
+    BODY .s-header-extra__user .i-ljuser-username B {
+        max-width: 190px;
+        }
+    BODY .s-header-extra .appwidget-stylealwaysmine .w-cs-label {
+        display: none;
+        }
+}
+
+/* <<< file end: stc/schemius_v4/header-journal-adaptive.css */
+
+/*# map link was there [header-journal-adaptive.css.map] */

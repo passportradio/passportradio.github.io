@@ -1,0 +1,138 @@
+/* >>> file start: stc/svg/headerextra.css */
+.headerextra {
+    fill: #99BFCC;
+    }
+.headerextra--calendar {
+    width: 24px;
+    height: 24px;
+    fill: #99BFCC;
+    }
+.headerextra--comm-join {
+    width: 19px;
+    height: 19px;
+    fill: #99BFCC;
+    }
+.headerextra--comm-leave {
+    width: 17px;
+    height: 17px;
+    fill: #99BFCC;
+    }
+.headerextra--dir-add {
+    width: 27px;
+    height: 27px;
+    fill: #99BFCC;
+    }
+.headerextra--dir-remove {
+    width: 27px;
+    height: 27px;
+    fill: #99BFCC;
+    }
+.headerextra--filter {
+    width: 26px;
+    height: 26px;
+    fill: #99BFCC;
+    }
+.headerextra--friend-add {
+    width: 24px;
+    height: 24px;
+    fill: #99BFCC;
+    }
+.headerextra--friend-edit {
+    width: 21px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+.headerextra--friend-remove {
+    width: 25px;
+    height: 25px;
+    fill: #99BFCC;
+    }
+.headerextra--friends-edit {
+    width: 25px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+.headerextra--friends-feed {
+    width: 24px;
+    height: 19px;
+    fill: #99BFCC;
+    }
+.headerextra--friends-list {
+    width: 22px;
+    height: 18px;
+    fill: #99BFCC;
+    }
+.headerextra--gift {
+    width: 26px;
+    height: 26px;
+    fill: #99BFCC;
+    }
+.headerextra--list {
+    width: 20px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+.headerextra--manage-pending {
+    width: 24px;
+    height: 24px;
+    fill: #99BFCC;
+    }
+.headerextra--message {
+    width: 17px;
+    height: 16px;
+    fill: #99BFCC;
+    }
+.headerextra--note-add {
+    width: 21px;
+    height: 21px;
+    fill: #99BFCC;
+    }
+.headerextra--note-edit {
+    width: 22px;
+    height: 21px;
+    fill: #99BFCC;
+    }
+.headerextra--post {
+    width: 20px;
+    height: 18px;
+    fill: #99BFCC;
+    }
+.headerextra--settings {
+    width: 22px;
+    height: 22px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-edit {
+    width: 21px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-feed-start {
+    width: 18px;
+    height: 21px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-feed-stop {
+    width: 28px;
+    height: 28px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-start {
+    width: 21px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-stop {
+    width: 27px;
+    height: 27px;
+    fill: #99BFCC;
+    }
+.headerextra--watch-user {
+    width: 21px;
+    height: 20px;
+    fill: #99BFCC;
+    }
+
+/* <<< file end: stc/svg/headerextra.css */
+
+/*# map link was there [headerextra.css.map] */

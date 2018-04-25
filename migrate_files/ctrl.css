@@ -1,0 +1,459 @@
+/* >>> file start: stc/ljtimes/ctrl.css */
+.b-ljtimes-wrapper {
+	position: fixed;
+	top: auto;
+	right: auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 2999;
+	font-size: 0;
+	background: #FFF;
+	}
+
+@media all and (max-width: 650px) {
+	.b-ljtimes-wrapper {
+		display: none;
+		}
+}
+
+.b-ljtimes-lwrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	}
+
+.i-ljtimes-border {
+	position: absolute;
+	top: -1px;
+	left: 0;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 1px;
+	background: #CCC;
+	font: 0/0 serif;
+	}
+
+.i-ljtimes-bl,
+	.i-ljtimes-br {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: block;
+		font: 0/0 serif;
+		width: 3000px;
+		height: 10px;
+		background: url(/img/ljtimes/border.png?v=9478) repeat 0 0;
+		}
+
+.i-ljtimes-bl {
+		margin: 0 0 0 -3030px;
+		}
+
+.i-ljtimes-br {
+		margin: 0 0 0 30px;
+		}
+
+.b-ljtimes-lwrapper .i-ljtimes-border {
+	display: none;
+	}
+
+.i-ljtimes-btn {
+	overflow: hidden;
+	position: absolute;
+	top: -17px;
+	left: 14px;
+	width: 46px;
+	height: 17px;
+	background: url(/img/ljtimes/button.png?v=10067) no-repeat 0 0;
+	font: 0/0 serif;
+	}
+
+.b-ljtimes-lwrapper .i-ljtimes-btn {
+	bottom: auto;
+	top: 0;
+    left: 50%;
+	height: 24px;
+    width: 60px;
+    margin: 0 0 0 -30px;
+    background: none;
+	}
+
+.i-ljtimes-drag {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 60px;
+		height: 5px;
+		font: 0/0 serif;
+		cursor: row-resize;
+		}
+
+.b-ljtimes-lwrapper .i-ljtimes-drag {
+		top: 16px;
+		height: 8px;
+		background: url(/img/ljtimes/down.png?v=10005) no-repeat 0 0; 
+		cursor: pointer;
+		}
+
+.i-ljtimes-click {
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: 0;
+    	width: 46px;
+		height: 18px;
+		font: 0/0 serif;
+		cursor: pointer;
+		}
+
+.b-ljtimes-lwrapper .i-ljtimes-click {
+		top: 0;
+		width: 60px;
+		height: 16px;
+		background: url(/img/ljtimes/arrow.png?v=10005) no-repeat 0 0;
+		}
+
+.b-ljtimes-inbox {
+	position: fixed;
+	bottom: 33px;
+	right: 0;
+	width: 300px;
+	font: 11px/1.2 Arial,sans-serif;
+	color: #000;
+	z-index: 999;
+	}
+
+.b-ljtimes-inbox-head {
+		display:block;
+		margin: 0;
+		padding: 7px 10px;
+		text-align: center;
+		font-weight: normal;
+		}
+
+.b-ljtimes-inbox-item {
+		display:block;
+		margin: 0;
+		padding: 5px 10px 7px;
+		list-style: none;
+		border-top: 1px solid #C1C1C1;
+		}
+
+.b-ljtimes-inbox-item:first-child {
+		border: 0;
+		}
+
+.b-ljtimes-inbox-item B {
+			font-weight: normal;
+			}
+
+.b-ljtimes-inbox-item IMG {
+			vertical-align: -5px !important;
+			}
+
+.b-ljtimes-inbox A:link,
+	.b-ljtimes-inbox A:visited {
+		color: #41789C !important;
+		text-decoration: underline !important;
+		border: 0 !important;
+		}
+
+.b-ljtimes-inbox A:hover,
+	.b-ljtimes-inbox A:active {
+		color: #41789C !important;
+		text-decoration: none !important;
+		border: 0 !important;
+		}
+
+.b-ljtimes-inbox .i-popup-arr {
+		left: auto;
+		right: 15px;
+		margin: 0;
+		}
+
+.b-ljtimes-update {
+	position: fixed;
+	bottom: 33px;
+	right: 0;
+	width: 380px;
+	font: 11px/1.2 Arial,sans-serif;
+	z-index: 9999;
+	}
+
+.b-ljtimes-update .b-popup {
+		position: static;
+		}
+
+.b-ljtimes-logged-label {
+		display: block;
+		margin: 0;
+		padding: 0;
+		}
+
+.b-ljtimes-logged-input {
+		overflow: hidden;
+		display: block;
+		margin: 1px 0 7px;
+		padding: 1px;
+		}
+
+.b-ljtimes-logged .i-ljtimes-text {
+		width: 330px;
+		margin: 0;
+		padding: 2px 1px;
+		font: 12px/1.2 Arial,sans-serif;
+		}
+
+.b-ljtimes-logged .i-ljtimes-textarea {
+		width: 330px;
+		height: 65px;
+		margin: 0;
+		padding: 2px 1px;
+		font: 12px/1.2 Arial,sans-serif;
+		}
+
+.b-ljtimes-logged .i-ljtimes-tags {
+		float: left;
+		width: 180px;
+		}
+
+.b-ljtimes-logged-submit {
+		float: right;
+		margin: 0;
+		}
+
+.b-ljtimes-success {
+		color: #000;
+		}
+
+.b-ljtimes-success .b-popup-inner {
+			padding: 30px;
+			}
+
+.b-ljtimes-success-title {
+			display: block;
+			margin: 0 0 10px;
+			font: bold 15px/1.2 Arial,sans-serif;
+			text-align: center;
+			}
+
+.b-ljtimes-success-body {
+			display: block;
+			line-height: 1.4;
+			text-align: center;
+			}
+
+.b-ljtimes-login {
+		color: #000;
+		font-size: 12px;
+		}
+
+.b-ljtimes-login-form {
+		position: relative;
+		overflow: hidden;
+		display:block;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		}
+
+.b-ljtimes-login-head,
+		.b-ljtimes-logged-head {
+			display:block;
+			margin: 0 0 5px;
+			padding: 0;
+			font: bold 14px/1.2 Arial,sans-serif;
+			color: #000;
+			}
+
+.b-ljtimes-login-input {
+			float: left;
+			margin: 0;
+			padding: 20px 5px 20px 1px;
+			list-style: none;
+			line-height: 1.2;
+			}
+
+.b-ljtimes-login .i-ljtimes-text {
+				width: 115px;
+				margin: 0 0 5px;
+				padding: 2px 1px;
+				font: 12px/1.2 Arial,sans-serif;
+				}
+
+.b-ljtimes-login .i-ljtimes-submit {
+				vertical-align: -6px;
+				}
+
+.b-ljtimes-login-create {
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
+
+.b-ljtimes-login-remember {
+			position: absolute;
+			top: 45px;
+			left: 0;
+			}
+
+.b-ljtimes-login-lostinfo {
+			position: absolute;
+			top: 48px;
+			left: 158px;
+			}
+
+.b-ljtimes-login-connect {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			}
+
+.b-ljtimes-login-connect IMG {
+				border: 0;
+				margin: 0 3px 0 0;
+				}
+
+.b-ljtimes-update A:link,
+	.b-ljtimes-update A:visited {
+		color: #41789C !important;
+		text-decoration: underline !important;
+		border: 0 !important;
+		}
+
+.b-ljtimes-update A:hover,
+	.b-ljtimes-update A:active {
+		color: #41789C !important;
+		text-decoration: none !important;
+		border: 0 !important;
+		}
+
+.b-ljtimes-bubble {
+	position: absolute;
+	left: 14px;
+	width: 292px;
+	margin: 0;
+	padding: 0;
+	font: 12px/1.2 Arial,sans-serif;
+	color: #000;
+	text-align: left;
+	}
+
+.b-ljtimes-bubble-top,
+	.b-ljtimes-bubble-bg,
+	.b-ljtimes-bubble-close {
+		display: block;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		font: 0/0 serif;
+		}
+
+.b-ljtimes-bubble-top {
+		top: 0;
+		left: 0;
+		width: 292px;
+		height: 7px;
+		background: url(/img/ljtimes/bubble-top.png?v=10269) no-repeat 0 0;
+		}
+
+.b-ljtimes-bubble-content{
+		overflow: hidden;
+		position: relative;
+		top: 7px;
+		margin: 0;
+		padding: 8px 15px 22px;
+		}
+
+.b-ljtimes-bubble-head {
+			position: relative;
+			display: block;
+			margin: 0 20px 5px 0;
+			padding: 0;
+			font-weight: bold;
+			z-index: 2;
+			}
+
+.b-ljtimes-bubble-p {
+			position: relative;
+			display: block;
+			z-index: 2;
+			}
+
+.b-ljtimes-bubble-bg {
+			bottom: 0;
+			left: 0;
+			width: 292px;
+			height: 357px;
+			background: url(/img/ljtimes/bubble-bg.png?v=10269) no-repeat 0 0;
+			z-index: 1;
+			}
+
+.b-ljtimes-bubble-close {
+			top: 8px;
+			right: 16px;
+			width: 12px;
+			height: 12px;
+			background: url(/img/ljtimes/bubble-close.gif?v=10269) no-repeat 0 0;
+			cursor: pointer;
+			z-index: 3;
+			}
+
+.b-ljtimes-suggest,
+.b-ljtimes-suggestbbl {
+	position: fixed;
+	bottom: 33px;
+	right: 0;
+	width: 380px;
+	font: 11px/1.2 Arial,sans-serif;
+	color: #000;
+	z-index: 999;
+	}
+
+.b-ljtimes-suggest .i-ljtimes-text {
+		width: 245px;
+		margin: 0 0 5px;
+		padding: 2px 1px;
+		font: 12px/1.2 Arial,sans-serif;
+		}
+
+.b-ljtimes-suggest-alert {
+		margin: 0 0 5px;
+		padding: 0;
+		font: 11px/1.2 Arial,sans-serif;
+		}
+
+.b-ljtimes-suggestbbl-alert {
+		margin: 0 0 5px;
+		padding: 0;
+		font: 12px/1.2 Arial,sans-serif;
+		}
+
+.b-ljtimes-suggest-input .i-ljtimes-submit {
+		vertical-align: 0;
+		}
+
+/* Pages without footer */
+
+.p-nofooter #ljtime_bottom {
+	height: 21px !important;	
+	}
+
+.p-footer-lite #ljtime_bottom {
+	height: 21px !important;
+	}
+
+.p-footer-lite.ljtimes-minimized #ljtime_bottom {
+	height: 0 !important;
+	}
+
+
+/* <<< file end: stc/ljtimes/ctrl.css */
+
+/*# map link was there [ctrl.css.map] */

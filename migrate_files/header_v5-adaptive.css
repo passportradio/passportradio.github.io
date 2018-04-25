@@ -1,0 +1,503 @@
+/* >>> file start: stc/schemius_v4/header_v5-adaptive.css */
+.s-header {
+    min-width: 240px;
+    }
+
+.html-adaptive .iphone .s-header {
+    width: 100%;
+    }
+
+.iphone .s-header {
+    margin-left: 0;
+    transition: margin-left .1s ease-in;
+    }
+
+/* .iphone.body-state-sidebar-opened .s-header {
+    margin-left: -360px;
+    } */
+
+.html-android.p-nav-common-menu-open {
+    -webkit-transform: translateZ(0);
+    }
+
+.s-nav-body--common { /* Fixes LJSUP-22107 point 2 */
+    right: 100%;
+    left: -100%;
+    }
+
+/* Side menus close triggers */
+
+.p-nav-common-menu-open .s-nav-control-common:after,
+.p-nav-user-menu-open .s-nav-control-user:after,
+.p-nav-user-menu-open .s-nav-control-login:after {
+    content: '';
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    width: 60px;
+    cursor: default;
+    z-index: 1;
+    }
+
+.p-nav-common-menu-open .s-nav-control-common:after {
+    right: 0;
+    }
+
+.p-nav-user-menu-open .s-nav-control-user:after,
+.p-nav-user-menu-open .s-nav-control-login:after {
+    left: 0;
+    }
+
+/* zindex fix for journals (LJSUP-26156) */
+
+.p-nav-user-menu-open .p-loginform .s-header {
+    z-index: 3001;
+    }
+
+.html-android .s-nav-control-login { /* Fixes LJSUP-22560 */
+    overflow: hidden;
+    }
+
+@media (max-width: 1790px) {
+    /* .iphone.body-state-menu-opened .s-header {
+        margin-left: 240px;
+        } */
+}
+
+@media (max-width: 1200px) {
+    .s-header-item--user .s-nav-item__name {
+        max-width: 200px;
+        }
+}
+
+@media (max-width: 1100px) {
+    .s-header-item--user .s-nav-item__name {
+        max-width: 125px;
+        }
+
+    .s-header-item-post--long {
+        display: none;
+        }
+    .s-header-item-post--short {
+        display: block;
+        }
+}
+
+@media (max-width: 1000px) {
+    .s-header-item--user .s-nav-item__name {
+        max-width: 110px;
+        }
+}
+
+@media (max-width: 960px) {
+    .s-logo {
+        width: 45px;
+        }
+        .s-logo-server-sign {
+            right: -.7em;
+            }
+}
+
+@media (max-width: 800px) {
+    .s-nav-body--user .s-drop-master:hover .s-drop,
+    .s-nav-body--user .s-drop-open .s-drop {
+        left: auto;
+        right: -30px;
+        }
+    .s-nav-body--user .s-drop:before {
+        right: 70px;
+        left: auto;
+        }
+
+    .s-header-item--user .s-nav-item__name {
+        display: none;
+        }
+        .s-header-sub-list-item__title {
+            color: #829399;
+            }
+    .s-header-sub-list-item--user {
+        display: block;
+        }
+}
+
+@media (max-width: 750px) {
+}
+
+/* @media (max-width: 650px) {
+    .iphone.body-state-sidebar-opened .s-header {
+        margin-left: -310px;
+        }
+} */
+
+@media (max-width: 700px) and (min-width: 601px) {
+    .s-header-item--support,
+    .s-header--logged-out .s-header-item--support,
+    .s-header-item--lj18 {
+        display: none;
+        }
+    .s-header-sub-list__item--support,
+    .s-header-sub-list__item--lj18 {
+        display: block;
+        }
+}
+
+@media (min-width: 601px) {
+    BODY .s-header--logged-out .s-header-item__link {
+        padding: 0 10px;
+        }
+
+    .s-header--logged-out .s-header-item__link--support {
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #FFF !important;
+        }
+        .s-header--logged-out .s-header-item__link--support .svgicon {
+            display: none;
+            }
+}
+
+@media (max-width: 600px) {
+    .s-logo {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        left: 60px;
+        width: auto;
+        padding: 0;
+        text-align: center;
+        }
+        .s-logo-server-sign {
+            right: .57em;
+            }
+
+    .s-header--logged-out .s-do {
+        display: none;
+        }
+
+    .s-header-sub-list-item__title {
+        color: #FFF;
+        }
+
+    .s-nav-item,
+    .s-header-sub-list__item {
+        margin-bottom: -1px;
+        border-top: 1px solid #00394D;
+        border-bottom: 1px solid #00394D;
+        }
+        .s-nav-item.s-nav-item-login { /* LJSUP-22137 */
+            margin-bottom: 0;
+            border: none;
+            }
+
+    .s-nav-control,
+    .s-nav-control-user {
+        display: block;
+        cursor: pointer;
+        }
+
+    .s-nav-body--convertible {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+        overflow-y: auto;
+        transition: .2s ease;
+        transition-property: right, left, visibility;
+        transition-delay: 0s, 0s, .2s;
+        }
+
+    .s-nav-body--convertible {
+        background: #003040;
+        }
+    .s-nav-body--user {
+        right: -100%;
+        left: 100%;
+        display: block;
+        }
+        .s-userpic .i-supus-empty {
+            display: block;
+            }
+        .s-nav-body--convertible .s-userpic {
+            display: none;
+            }
+        .s-header-item--user {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            border-left: 1px solid #005673;
+            }
+            .s-header-item--user .s-header-item__link {
+                padding: 0 15px;
+                }
+
+    /* Menu */
+    .s-nav-body--convertible .s-nav-item {
+        float: none;
+        overflow: hidden;
+        }
+    .s-header-item--has-sub,
+    .s-header--logged-out .s-header-item--has-sub {
+        margin-right: 0;
+        }
+        .s-header-item--has-sub:after {
+            content: none;
+            }
+        .s-nav-body--convertible .s-header-item__link {
+            padding: 1em 24px .7em;
+            line-height: 1.4 !important;
+            }
+
+        .s-nav-body--convertible .s-nav-item-signup {
+            margin: 0;
+            }
+            .s-nav-item-signup .b-flatbutton,
+            .s-nav-item-signup .b-flatbutton:link,
+            .s-nav-item-signup .b-flatbutton:visited {
+                background: none;
+            }
+            .s-nav-item-signup .b-flatbutton {
+                padding: 0 24px;
+                line-height: 40px;
+                }
+
+    .s-nav-body--convertible .s-header-sub-list-item__link,
+    .s-nav-body--convertible .s-nav-sub-item-p {
+        min-width: auto;
+        padding: 1em 24px .7em;
+        white-space: normal;
+        }
+    .s-nav-body--convertible .s-header-item__link:focus,
+    .s-nav-body--convertible .s-header-item__link:hover,
+    .s-nav-body--convertible .s-header-sub-list-item__link:focus,
+    .s-nav-body--convertible .s-header-sub-list-item__link:hover {
+        background: #004359 !important;
+        }
+
+    /* Second level */
+    .s-nav-body--convertible .s-drop {
+        background: #003040;
+        }
+    .s-nav-body--convertible .s-drop-master .s-drop,
+    .s-nav-body--convertible .s-drop-master:hover .s-drop {
+        position: static;
+        display: block;
+        }
+    .s-nav-body--convertible .s-drop-master .s-drop:before {
+        content: none;
+        }
+    .s-nav-body--convertible .s-drop-open .s-drop,
+    .s-nav-body--convertible .s-drop {
+        display: block;
+        }
+
+    .s-header-item-post,
+    .s-header-search--wide-screens {
+        display: none;
+        }
+    .s-nav-item-post,
+    .s-header-item--search {
+        display: block;
+        }
+
+    .s-header-item--find-more,
+    .s-header-sub-list-item--user {
+        background: #829399;
+        }
+
+    .s-header-item--friends,
+    .s-header-sub-list-item--support {
+        display: none;
+        }
+    .s-header-sub-list__item--friends,
+    .s-header-sub-list__item--media,
+    .s-header-sub-list__item--friendsactivity,
+    .s-header-sub-list__item--friendsoffriends,
+    .s-header-item--support {
+        display: block;
+        }
+
+
+
+    /* Low width menu open behavior */
+    BODY, /* for s2 pages */
+    .html-adaptive .body-content { /* for schemius pages */
+        position: relative;
+        left: 0;
+        transition: left .2s ease;
+        }
+
+    .p-nav-common-menu-open,
+    .p-nav-common-menu-open BODY {
+        overflow: hidden;
+        }
+
+    .p-nav-common-menu-open,
+    .p-nav-common-menu-open BODY,
+    .p-nav-user-menu-open,
+    .p-nav-user-menu-open BODY {
+        min-width: 0;
+        -webkit-overflow-scrolling: none;
+        }
+        .p-nav-common-menu-open BODY, /* for s2 pages */
+        .p-nav-common-menu-open.html-adaptive .body-content { /* for schemius pages */
+            left: 100%;
+            margin-left: -60px;
+            }
+            .p-nav-common-menu-open .s-nav-body--convertible,
+            .p-nav-user-menu-open .s-nav-body--user,
+            .p-nav-user-menu-open .b-loginform.s-loginform {
+                visibility: visible;
+                transition-delay: 0s;
+                }
+            .p-nav-common-menu-open .s-nav-body--common {
+                right: 60px;
+                left: 0;
+                }
+            .p-nav-user-menu-open .s-nav-body--user {
+                right: 0;
+                left: 60px;
+                }
+
+        .p-nav-common-menu-open .s-nav-body--user,
+        .p-nav-common-menu-open .b-loginform.s-loginform,
+        .p-nav-common-menu-open .l-flatslide-controls,
+        .p-nav-common-menu-open .s-footer,
+        .p-nav-user-menu-open .s-nav-body--common,
+        .p-nav-user-menu-open .l-flatslide-controls,
+        .p-nav-user-menu-open .s-footer {
+            display: none;
+            }
+
+        .p-nav-common-menu-open .i-iconus-menu.s-nav-control__icon-open,
+        .p-nav-nav-menu-open .i-iconus-menu.s-nav-control__icon-open {
+            display: none;
+            }
+
+        .p-nav-common-menu-open .i-iconus-menu.s-nav-control__icon-close,
+        .p-nav-nav-menu-open .i-iconus-menu.s-nav-control__icon-close {
+            display: inline-block;
+            }
+
+    /* s2 menu behavior reset for schemius pages */
+    BODY.s-schemius {
+        left: auto;
+        transition: none;
+        }
+    .p-nav-common-menu-open,
+    .html-adaptive.p-nav-common-menu-open BODY,
+    .p-nav-user-menu-open,
+    .html-adaptive.p-nav-user-menu-open BODY {
+        width: 100%;
+        }
+        .p-nav-common-menu-open.html-adaptive BODY,
+        .p-nav-user-menu-open.html-adaptive BODY {
+            left: auto;
+            }
+        .p-nav-common-menu-open.html-adaptive BODY {
+            margin-left: 0;
+            }
+        .p-nav-user-menu-open.html-adaptive BODY {
+            margin-right: 0;
+            }
+    /* /s2 menu behavior reset for schemius pages */
+
+    BODY.s-rambler-adblock .s-header-item--adblock {
+        display: block;
+        }
+}
+
+@media (max-width: 380px) {
+    .s-header-item-post {
+        display: none;
+        }
+    .s-nav-item-post {
+        display: block;
+        }
+}
+
+/* LJSUP-22001 [New Top Menu] Create nojs version of header_v5 */
+
+.s-nav-nojs-control-login {
+    display: none;
+    }
+
+@media (max-width: 600px) {
+    #no-js .s-header__nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: none;
+        }
+
+    #no-js .s-header--logged-out .s-header__nav {
+        width: 100%;
+        padding-right: 60px;
+        box-sizing: border-box;
+        }
+    #no-js .s-header--logged-out .s-logo {
+        z-index: 3;
+        }
+    #no-js .s-nav-body--common.s-nav-body--convertible,
+    #no-js .s-nav-body--user.s-nav-body--convertible {
+        display: none;
+        }
+    #no-js .s-header__nav:hover .s-nav-body--common.s-nav-body--convertible {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        top: 60px;
+        bottom: auto;
+        min-width: 320px;
+        padding-bottom: 30px;
+        visibility: visible;
+        transition: none;
+        }
+
+    /*#no-js .s-nav-control-user {
+        display: none;
+        }*/
+
+    #no-js .s-drop-master:hover .s-nav-body--user.s-nav-body--convertible {
+        display: block;
+        z-index: 1;
+        visibility: visible;
+        position: absolute;
+        overflow: hidden;
+        transition: none;
+        bottom: auto;
+        left: -260px;
+        min-width: 320px;
+        right: 0;
+        top: 60px;
+        }
+
+    #no-js BODY, .html-adaptive .body-content {
+        transition: none;
+        }
+    #no-js .s-nav-control-login {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        }
+
+    #no-js .s-nav-nojs-control-login {
+        display: block;
+        z-index: 5;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        }
+    }
+
+/* <<< file end: stc/schemius_v4/header_v5-adaptive.css */
+
+/*# map link was there [header_v5-adaptive.css.map] */

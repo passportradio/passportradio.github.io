@@ -1,0 +1,49 @@
+/* >>> file start: stc/schemius_v4/print.css */
+.mdspost-qrcode,
+.b-singlepost-qrcode {
+    display: none;
+    }
+
+@media print {
+    BUTTON,
+    .s-layout:after,
+    .s-header,
+    .s-footer,
+    .b-loginform.s-loginform,
+    .common-banner,
+    .b-ljpromo-nav,
+    .b-ljtimes-wrapper
+    .html5-video-player,
+    .b-massaction,
+    #ljlive {
+        display: none;
+        }
+
+    .b-singlepost-body A[href]:after {
+        content: ' (' attr(href) ') ';
+        }
+
+    .b-singlepost-body .i-ljuser-profile[href]:after {
+        content: none;
+        }
+
+    .b-singlepost-qrcode {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        }
+
+    /* If there is some transition defined then its property will be affected at print version of page*/
+    * {
+        transition: none !important;
+        }
+
+    .print-logo {
+        display: block;
+        }
+}
+
+/* <<< file end: stc/schemius_v4/print.css */
+
+/*# map link was there [print.css.map] */
