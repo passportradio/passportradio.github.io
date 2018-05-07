@@ -1,0 +1,98 @@
+/* >>> file start: stc/recaptcha.css */
+.b-captcha {
+  margin: 0;
+  padding: 0;
+  }
+  .b-captcha #recaptcha_area {
+    *zoom: 1;
+    }
+  .b-captcha .recaptchatable {
+    background: #FFF;
+    border: none !important;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #DAE3E6;
+    }
+  .b-captcha .recaptcha_image_cell {
+    background: transparent !important;
+    }
+  .b-captcha .recaptchatable #recaptcha_image {
+      border: none !important;
+      }
+  .b-captcha .recaptchatable #recaptcha_response_field {
+    border: 1px solid #DAE3E6 !important;
+    }
+  .b-captcha IFRAME {
+  display: block;
+  }
+  .b-captcha BODY {
+  margin: 0;
+  padding: 0;
+  }
+  .captcha-disclaimer {
+  font-size: 0.875em;
+  color: #7A9199;
+  }
+  .captcha-disclaimer A {
+  white-space: nowrap;
+}
+  .quick-comment-entryunit--mobile #captcha-container {
+  position: absolute;
+}
+  .quick-comment-entryunit--mobile .captcha-disclaimer {
+  display: block;
+  margin-right: 250px;
+}
+  .grecaptcha-badge {
+  display: none;
+  }
+  @media all and (max-width: 500px) {
+  .quick-comment-entryunit--mobile .captcha-disclaimer {
+    margin-right: 0;
+    margin-top: 54px;
+  }
+  }
+  /* Recaptcha Tiles Popup */
+  .body--recaptcha-opened {
+  overflow: hidden;
+  }
+  .recaptcha-tiles {
+  position: fixed !important;
+  z-index: 90000; /* To overlap adv on mobile */
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: auto !important;
+  }
+  .recaptcha-tiles__iframe-wrapper {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: auto !important;
+    }
+  @media all and (max-height: 480px) {
+  .recaptcha-tiles__iframe-wrapper {
+    -webkit-transform: scale(.85);
+        -ms-transform: scale(.85);
+            transform: scale(.85);
+  }
+}
+  @media all and (max-height: 420px) {
+  .recaptcha-tiles__iframe-wrapper {
+    -webkit-transform: scale(.75);
+        -ms-transform: scale(.75);
+            transform: scale(.75);
+  }
+}
+  @media all and (max-height: 370px) {
+  .recaptcha-tiles__iframe-wrapper {
+    -webkit-transform: scale(.65);
+        -ms-transform: scale(.65);
+            transform: scale(.65);
+  }
+}
+
+/* <<< file end: stc/recaptcha.css */
+
+/*# map link was there [recaptcha.css.map] */

@@ -1,0 +1,47 @@
+/* >>> file start: stc/widgets/flatwidget.css */
+/* dummy loader */
+.flatwidget__load {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    }
+.load-flatwidget__item {
+        position: relative;
+        height: 42px;
+        margin: 0 0 14px;
+        padding: 0;
+        }
+.load-flatwidget__item:before,
+        .load-flatwidget__item:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 19px;
+            -webkit-animation: flatwidget-load 1s infinite;
+            animation:         flatwidget-load 1s infinite;
+            }
+.flatwidget--default-theme .load-flatwidget__item:before,
+            .flatwidget--default-theme .load-flatwidget__item:after {
+                background: #F8F9FB;
+                }
+.load-flatwidget__item:before {
+            width: 250px;
+            }
+.load-flatwidget__item:after {
+            bottom: 0;
+            width: 200px;
+            }
+@-webkit-keyframes flatwidget-load {
+            0%   { opacity: 0.8; }
+            50%  { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+@keyframes flatwidget-load {
+            0%   { opacity: 0.8; }
+            50%  { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+/* <<< file end: stc/widgets/flatwidget.css */
+
+/*# map link was there [flatwidget.css.map] */

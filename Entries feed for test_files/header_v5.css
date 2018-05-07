@@ -70,23 +70,6 @@ HTML BODY .s-header {
             font-size: inherit !important;
             text-transform: uppercase !important;
             }
-.s-header-in--black {
-      background-color: #000000 !important;
-      }
-.s-header-in--black .s-nav-control-common,
-      .s-header-in--black .s-header-search__input-wrapper,
-      .s-header-in--black .s-nav-control {
-    background-color: #000000 !important;
-}
-.s-header-in--black .b-flatbutton-simple {
-    background: #004359 !important;
-}
-.s-header-in--black .b-flatbutton-simple:hover {
-    background: #00475e !important;
-}
-.s-header-in--black .b-flatbutton-simple:active {
-    background: #004156 !important;
-}
 /* HTML BODY is to override stupid s2 layers A rules */
 HTML BODY .s-header-item__link,
     HTML BODY .s-header-sub-list-item__link,

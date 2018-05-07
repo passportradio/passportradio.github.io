@@ -5258,9 +5258,6 @@ LJ.UI.registerTemplate('templates-Widgets-dialogs', "<div class=\"b-popup\"> <di
       });
     },
         refreshBlockerData = function refreshBlockerData() {
-      if (!LJ.get('remote')) {
-        return Promise.resolve();
-      }
       return Promise.all([LJ.Api.call('relations.can_add_friends', { target: journalUsername }), LJ.Api.call('relations.can_add_subscribers', { target: journalUsername })]).then(function (allResponse) {
         if (!allResponse[0] || !allResponse[1]) {
           return;

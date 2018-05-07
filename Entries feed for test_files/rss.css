@@ -1,0 +1,193 @@
+/* >>> file start: stc/widgets/rss.css */
+/* Translations (temporary frozen)
+-----------------------------------------*/
+.l-flatslide-translation .l-flatslide-intro-heads {
+    float: none;
+    padding-right: 8em;
+    }
+.b-translation {
+    display: inline-block;
+    margin: 0;
+    }
+.b-translation-control {
+        display: inline-block;
+        line-height: 13px;
+        vertical-align: bottom;
+        white-space: nowrap;
+        }
+/* hide svg icon wide screen */
+.b-translation-control .svgicon {
+        display: none;
+        }
+/* show svg icon tiny screen */
+@media all and (max-width: 768px) {
+
+        .b-translation {
+            position: absolute;
+            top: 58%;
+            right: 10px;
+            float: none;
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            }
+
+        .b-translation--m-aside-menu {
+          right: 4px;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 40px;
+          width: 40px;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          }
+
+        .b-translation--m-aside-menu {
+          top: 0;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          }
+
+        .b-translation-control {
+            display: block;
+            width: 16px;
+            height: 16px;
+            }
+
+        .b-translation-control .svgicon {
+            display: block;
+            width: 16px;
+            height: 16px;
+            }
+        .b-translation-rss-title {
+            display: none;
+            }
+
+        .l-flatslide-translation .l-flatslide-intro-heads {
+            padding-right: 0;
+            }
+
+    }
+.b-popup-translation {
+    min-width: 350px;
+    }
+.b-translation-heads {
+    margin: 0 0 6px;
+    }
+.b-translation-content {
+    position: relative;
+    max-width: 450px;
+    }
+.b-translation-items,
+    .b-translation-errors {
+        margin: 0 0 10px;
+        }
+.b-translation-title {
+        display: none;
+        color: #7A9199;
+        }
+.b-translation-input {
+        display: none;
+        }
+.b-translation-error {
+        display: none;
+        color: #CB1427;
+        }
+.b-translation-success-item {
+        display: none;
+        position: relative;
+        color: #7A9199;
+        }
+.b-translation-submit {
+        white-space: nowrap;
+        text-align: right;
+        }
+.b-translation-submit .b-flatbutton {
+            outline: none;
+            }
+.b-translation-submit:after {
+        display: table;
+        content: "";
+        clear: both;
+        }
+.b-translation-submit-add,
+        .b-translation-submit-create,
+        .b-translation-submit-next,
+        .b-translation-submit-back {
+            display: none;
+            }
+.b-translation-submit-back {
+            float: left;
+            }
+.b-translation .b-flatbutton + .b-flatbutton {
+        margin: 0;
+        }
+.b-translation-add-state .b-translation-title-add,
+.b-translation-add-state .b-translation-submit-add,
+.b-translation-add-state .b-translation-input-add,
+.b-translation-add-state.b-translation-error-state .b-translation-error-add {
+    display: inline-block;
+    }
+.b-translation-create-state .b-translation-title-create,
+.b-translation-create-state .b-translation-submit-create,
+.b-translation-create-state .b-translation-input-create,
+.b-translation-create-state .b-translation-submit-back,
+.b-translation-create-state.b-translation-error-state .b-translation-error-create {
+    display: inline-block;
+    }
+.b-translation-success-add-state .b-translation-title-add-success,
+.b-translation-success-create-state .b-translation-title-create-success,
+.b-translation-success-add-state .b-translation-submit-next,
+.b-translation-success-create-state .b-translation-submit-next,
+.b-translation-success-create-state .b-translation-success-item,
+.b-translation-success-add-state .b-translation-success-item {
+    display: inline-block;
+    }
+.b-translation-loading-state.b-translation-loading-state:before {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 36px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -18px;
+    content: "";
+    background-image: url(/img/preloader/preloader-square-blue-10.gif?v=43819);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    }
+.b-translation-content.b-translation-loading-state:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    opacity: .8;
+    background-color: #FFF;
+    }
+/* rss popup */
+.b-bubble-rss {
+    min-width: 360px;
+    z-index: 4998;
+    }
+.b-bubble-rss .i-popup-close {
+    top: 10px;
+    }
+
+/* <<< file end: stc/widgets/rss.css */
+
+/*# map link was there [rss.css.map] */

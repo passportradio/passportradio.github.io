@@ -1,0 +1,1220 @@
+/* >>> file start: stc/lenta/lenta_v3/lenta.css */
+/*
+ - p-lenta
+ - - b-lenta-header
+ - - b-lenta-body
+ - - b-lenta-sidebar-static
+ - - b-lenta-sidebar
+ - - b-lenta-footer
+*/
+
+
+/* Headers
+-----------------------------------------*/
+
+
+.b-lenta-body H1,
+.b-lenta-body H2,
+.b-lenta-body H3,
+.b-lenta-body H4,
+.b-lenta-body H5,
+.b-lenta-body H6 {
+    font-weight: normal;
+    }
+
+
+.b-lenta-body H1 {
+    font-size: 42px;
+    }
+
+
+.b-lenta-body H2 {
+    font-size: 38px;
+    }
+
+
+.b-lenta-body H3 {
+    font-size: 1.75em;
+    line-height: 1;
+    font-family: 'ProximaNova', Helvetica, sans-serif;
+    font-weight: 300;
+    }
+
+
+.b-lenta-body .mdspost-brief--feed {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #8C969B;
+    margin: 0.352941176em 0;
+    }
+
+
+.b-lenta-body .mdspost-editor--feed {
+    font-size: 0.8125em;
+    font-weight: 400;
+    text-align: right;
+    color: #8C969B;
+    margin: 0.352941176em 0;
+    }
+
+
+.b-lenta-body .mdspost-editor--feed B {
+    font-weight: inherit;
+}
+
+
+.b-lenta-calendar H3 {
+        margin: 0 0 15px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-style: normal;
+        font-weight: normal;
+        }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .b-lenta-calendar H3 {
+        font-size: 1.25em;
+        }
+
+
+.b-lenta-sidebar-title,
+    .b-lenta-sidebar-title A,
+    .j-l-beta-header {
+        color: #435459;
+        }
+
+
+.b-lenta-item-title A {
+            color: #005673;
+            }
+
+
+.b-lenta-body H4 {
+    font-size: 28px;
+    }
+
+
+/* Lenta
+-----------------------------------------*/
+
+
+.p-lenta {
+    -webkit-font-smoothing: antialiased;
+    background-attachment: fixed;
+    }
+
+
+/* Layout
+-----------------------------------------*/
+
+
+.b-lenta .l-flatslide-container {
+    position: relative;
+    }
+
+
+.b-lenta .l-flatslide-container:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 51px;
+    z-index: -1;
+    width: 369px;
+    background: #FFF;
+    font: 0/0 a;
+    }
+
+
+.b-lenta .l-flatslide-menu-items {
+        display: none;
+        }
+
+
+.b-lenta .l-flatslide-menu-items.l-flatslide-menu-items-active {
+        display: block;
+        transition: top .2s, height .2s;
+        z-index: 0;
+        }
+
+
+.l-flatslide-state-shownav.b-lenta .l-flatslide-container:after {
+        right: -189px;
+        }
+
+
+.b-lenta .l-flatslide-content {
+        min-height: 1000px;
+        margin-bottom: 0;
+        }
+
+
+.b-lenta--v3 .l-flatslide-content {
+        padding-bottom: 1.25em;
+        }
+
+
+@media all and (min-width: 1500px) {
+
+    .l-flatslide-state-shownav.b-lenta .l-flatslide-container:after {
+        right: -139px;
+        }
+
+}
+
+
+@media all and (min-width: 1600px) {
+
+    .l-flatslide-state-shownav.b-lenta .l-flatslide-container:after {
+        right: -89px;
+        }
+
+}
+
+
+@media all and (min-width: 1700px) {
+
+    .l-flatslide-state-shownav.b-lenta .l-flatslide-container:after {
+        right: -39px;
+        }
+
+}
+
+
+@media all and (min-width: 1790px) {
+
+    .l-flatslide-state-shownav.b-lenta .l-flatslide-container:after {
+        right: 51px;
+        }
+
+}
+
+
+@media all and (max-width: 1000px) {
+
+    .b-lenta .l-flatslide-container:after {
+        display: none;
+        }
+    .b-lenta .l-flatslide-content {
+        }
+    .b-lenta .b-lenta-body,
+    .b-lenta .l-flatslide-intro {
+        padding-left: 10px;
+        }
+
+}
+
+
+@media all and (max-width: 680px) {
+
+    .b-lenta .b-lenta-body {
+        padding-right: 10px;
+        }
+
+}
+
+
+@media all and (max-width: 650px) {
+
+    .b-lenta .b-lenta-body {
+        padding: 0;
+        }
+
+    .b-feedwidgets-item {
+        width: auto;
+        }
+    /* irrational fixes vol. 2 LJSUP-23201
+    Need to do the same margins on all pages (on mobile) */
+    .b-lenta-mobileadaptive .l-flatslide-controls {
+        display: none;
+        }
+
+    .b-lenta .l-flatslide-menu-items.l-flatslide-menu-items-active {
+      height: inherit !important;
+      margin-bottom: -50px;
+      }
+}
+
+
+@media all and (max-width: 480px) {
+
+    .b-lenta .b-lenta-body,
+    .b-lenta .l-flatslide-intro {
+        padding-left: 2px;
+        }
+
+}
+
+
+/* Body of the lenta
+-----------------------------------------*/
+
+
+.b-lenta-body {
+    padding: 0;
+    }
+
+
+/* hide wide elements (LJSUP-25689) */
+
+
+.b-lenta-body .entryunit {
+        overflow: hidden;
+        }
+
+
+.b-lenta-body .entryunit__text DIV[style*="width"][style*="height"] {
+        clear: both;
+        }
+
+
+/* Calendar
+-----------------------------------------*/
+
+
+.b-lenta-calendar {
+    }
+
+
+.sbar-cal-nav-month,
+.sbar-cal-nav-year {
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding: 0 12px 0 14px;
+    letter-spacing: 0.05em;
+    font-size: 13px;
+    }
+
+
+.sbar-cal-nav-year {
+    float: right;
+    }
+
+
+.sbar-cal-nav {
+        color: #799297;
+        }
+
+
+.sbar-cal-nav:after {
+            display: table;
+            clear: both;
+            content: "";
+            }
+
+
+.sbar-cal-nav A:hover {
+            color: #555555;
+            }
+
+
+#js .sbar-cal-nav-prev,
+    #js .sbar-cal-nav-next {
+        display: block;
+        position: absolute;
+        top: 2px;
+        width: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+        }
+
+
+#js .sbar-cal-nav-prev {
+            left: 0;
+            }
+
+
+#js .sbar-cal-nav-next {
+            right: 0;
+            }
+
+
+.sbar-cal-nav-arr {
+        display: block;
+        position: relative;
+        border-color: rgba(0, 0, 0, 0) #005D8E;
+        border-style: solid;
+        font: 0pt/0 sans-serif;
+        width: 0;
+        color: #7A9199;
+        }
+
+
+.sbar-cal-nav-arr .svgicon {
+            width: 10px;
+            height: 14px;
+            }
+
+
+.sbar-cal-nav-prev .sbar-cal-nav-arr,
+    .sbar-cal-nav-next .sbar-cal-nav-arr {
+        background-image: url(/img/friendsfeed/sprite.svg?v=40545);
+        background-repeat: no-repeat;
+        }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .sbar-cal-nav-prev .sbar-cal-nav-arr,
+        .b-feedsettings-on .sbar-cal-nav-next .sbar-cal-nav-arr {
+            background-image: none;
+            }
+
+
+.sbar-cal-nav-prev .sbar-cal-nav-arr,
+        .sbar-cal-nav-next .sbar-cal-nav-arr {
+            width: 10px;
+            background-position: -240px -40px;
+            border: 0 none;
+            height: 14px;
+            vertical-align: middle;
+            }
+
+
+.sbar-cal-nav-next .sbar-cal-nav-arr {
+            background-position: -250px -40px;
+            }
+
+
+.disabled .sbar-cal-nav-arr {
+            opacity: 0.5;
+            cursor: default;
+            }
+
+
+.sbar-cal-month,
+.sbar-cal-year {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    }
+
+
+.b-lenta-calendar TABLE {
+    width: 100%;
+    clear: both;
+    border-collapse: collapse;
+    border-top: 1px solid #DAE3E6;
+    margin-top: 20px;
+    }
+
+
+.b-lenta-calendar TD,
+    .b-lenta-calendar TH {
+        width: 14.28%;
+        height: 39px;
+        border-color: #DAE3E6;
+        border-style: solid;
+        border-width: 0 0 1px 1px;
+        font-size: 12px;
+        text-align: center;
+        color: #799299;
+        }
+
+
+.b-lenta-calendar TABLE TH {
+            background: none repeat scroll 0 0 #F8F9FB;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            }
+
+
+.b-lenta-calendar TABLE TD:first-child,
+        .b-lenta-calendar TABLE TH:first-child {
+            border-left: 0 none;
+            }
+
+
+/* Friends feed's footer
+----------------------------------*/
+
+
+/* Pager */
+
+
+.b-lenta .b-pager {
+    }
+
+
+.b-lenta .b-pager LI {
+        }
+
+
+.b-pager-prev {
+        float: left;
+        }
+
+
+.b-pager-next {
+        float: right;
+        border-right: 0;
+        }
+
+
+/* Preloader
+-----------------------------------------*/
+
+
+.b-lenta-loader {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    }
+
+
+.b-lenta-spinner {
+        width: 36px;
+        height: 50px;
+        margin: 0 auto;
+        background: url(/img/preloader/preloader-square-blue-10.gif?v=43819) no-repeat 50% 50%;
+        }
+
+
+.svgpreloader-piece {
+    fill: #DAE3E6;
+    }
+
+
+.svgpreloader-background {
+    fill: #7A9199;
+    }
+
+
+/* Toogle Preloader */
+
+
+.b-lenta-loader {
+    display: none;
+    }
+
+
+.b-lenta-loading .b-lenta-loader {
+    display: block;
+    }
+
+
+.b-lenta-state-empty .b-lenta-emptiness {
+    display: block;
+    }
+
+
+/* no entries */
+
+
+.b-lenta-emptiness {
+    display: none;
+    margin: 1em 0;
+    font-size: 1.1875em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #829399;
+    }
+
+
+.b-lenta-emptiness--nojs-or-pages {
+        display: block;
+        }
+
+
+/* Flatwidget Preloader */
+
+
+.load-flatwidget {
+    list-style: none;
+    padding: 0;
+    }
+
+
+/* Feed settings
+-----------------------------------------*/
+
+
+.b-feedsettings {
+    overflow: auto;
+    position: fixed;
+    top: 102px;
+    bottom: 0;
+    left: -240px;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    width: 239px;
+    border-right: 1px solid #DAE3E6;
+    background: none repeat scroll 0 0 #F7F9FA;
+    list-style: none outside none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font: 13px/1.1 'ProximaNova', Tahoma, Arial, sans-serif;
+    font: 0.8125rem/1.1 'ProximaNova', Tahoma, Arial, sans-serif;
+    font-weight: 600;
+    transition: left 0.1s ease-in 0s;
+    }
+
+
+.b-feedsettings-show .b-feedsettings {
+        visibility: visible;
+        }
+
+
+.b-feedsettings-inner {
+    padding: 24px 18px 32px 12px;
+    }
+
+
+.b-feedsettings-inner .b-feedsettings-block:first-child {
+        margin: 0;
+        }
+
+
+.b-feedsettings-header {
+    position: relative;
+    margin: 0 0 28px;
+    }
+
+
+.b-feedsettings-title {
+        position: relative;
+        display: inline-block;
+        padding: 0 20px 0 0;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 13px;
+        color: #49595E;
+        }
+
+
+.b-feedsettings-block {
+    margin: 30px 0 0;
+    }
+
+
+.b-feedsettings-block-content {
+        margin: 12px 0 0;
+        }
+
+
+.b-feedsettings-item {
+    position: relative;
+    min-height: 20px;
+    margin: 0 0 16px;
+    }
+
+
+.b-feedsettings-item-aside {
+        float: right;
+        }
+
+
+.b-feedsettings-label {
+        display: inline-block;
+        padding: 0 26px 0 0;
+        line-height: 12px;
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 13px;
+        color: #829399;
+        }
+
+
+.b-feedsettings-label:after {
+            display: inline-block;
+            min-height: 20px;
+            vertical-align: middle;
+            content: " ";
+            }
+
+
+.b-feedsettings-label-size,
+        .b-feedsettings-label-font,
+        .b-feedsettings-label-type {
+            padding-right: 0;
+            white-space: normal;
+            word-wrap: break-word;
+            word-wrap: break-word;
+            }
+
+
+.b-feedsettings-select {
+                font-size: 12px;
+                height: 1.7em;
+                font-weight: 400;
+                }
+
+
+.html-ie11 .b-feedsettings-select {
+                height: auto;
+                padding-top: 0.15em;
+            }
+
+
+.b-feedsettings-select-font {
+                width: 109px;
+                }
+
+
+.b-feedsettings-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7A9199;
+    box-sizing: border-box;
+    cursor: pointer;
+    }
+
+
+.b-feedsettings-action-bg-image {
+        border: 0;
+        background: url(/img/friendsfeed/photo.svg?v=42923) 0 0 no-repeat;
+        background-size: cover;
+        }
+
+
+.b-feedsettings-btn {
+    display: inline-block;
+    margin: 3px 5px 3px 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 12px !important;
+    }
+
+
+BODY .b-popupus.b-popup-feedsettings .b-popup-outer {
+    padding: 0;
+    }
+
+
+.b-feedsettings-bubble {
+    min-width: 350px;
+    border-radius: 8px;
+    text-transform: capitalize !important;
+    font-family: 'ProximaNova';
+    }
+
+
+.b-feedsettings-upload {
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border: 1px solid #DAE3E6;
+        background-position: 0 0;
+        cursor: pointer;
+        }
+
+
+.b-feedsettings-upload-default {
+        height: 190px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-image: url(/img/svg/fi-upload-image.svg?v=43781);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: auto;
+        }
+
+
+.b-feedsettings-bg-options:after {
+        display: table;
+        content: "";
+        clear: both;
+        }
+
+
+.b-feedsettings-bg-options-head {
+        position: relative;
+        float: left;
+        width: 205px;
+        height: 190px;
+        margin: 0 10px 0 0;
+        background-color: rgba(255,255,255, 0.6);
+        }
+
+
+.b-feedsettings-delete-icon {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: #00A3D9;
+            background-image: url(/img/friendsfeed/close.svg?v=43781);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            }
+
+
+.b-feedsettings-spinner {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -15px;
+            background: url(/img/preloader/preloader-blue-lblue.gif?v=16423) 0 0 no-repeat;
+            }
+
+
+.b-feedsettings-upload-state-user .b-feedsettings-bg-options-head:hover .b-feedsettings-delete-icon {
+            display: block;
+            }
+
+
+.b-feedsettings-upload-state-loading .b-feedsettings-spinner {
+            display: block;
+            }
+
+
+.b-feedsettings-upload-state-loading .b-feedsettings-upload-default {
+            cursor: default;
+            background-image: none;
+            }
+
+
+.b-feedsettings-bg-options-body {
+        overflow: hidden;
+        margin: 0 0 10px;
+        padding: 0 5px;
+        }
+
+
+.b-feedsettings-bg-options-item {
+        margin-bottom: 8px;
+        }
+
+
+.b-feedsettings-bg-options-row {
+        margin: 3px 0;
+        }
+
+
+.b-feedsettings-checkbox-text {
+        font-size: 13px;
+        }
+
+
+#pickfiles {
+        display: none;
+        }
+
+
+.b-feedsettings-bubble select {
+        height: 1.7em;
+        }
+
+
+.html-ie11 .b-feedsettings-bubble select {
+        height: auto;
+        padding-top: .15em;
+        }
+
+
+/* Feed widgets
+-----------------------------------------*/
+
+
+.b-feedwidgets {
+    width: 330px;
+    text-align: left;
+    }
+
+
+/* feedwidgets headers */
+
+
+.b-feedsettings-on .b-mysocial-header,
+    .b-feedsettings-on .b-myupdates-header,
+    .b-feedsettings-on .b-todaylj-title,
+    .b-feedsettings-on .b-mylinks-header {
+        font-size: 1.25em;
+        }
+
+
+/* selectus */
+
+
+.b-lenta .b-selectus {
+        border: 1px solid #DAE3E6;
+        background: #F8F9FB;
+        }
+
+
+/* select */
+
+
+/*    .b-feedwidgets-options {
+        }*/
+
+
+.b-feedwidgets-select {
+            margin: 0;
+            }
+
+
+.b-lenta .b-feedwidgets-options .b-selectus .label {
+            font-family: 'ProximaNova', Helvetica, sans-serif;
+            font-size: 1em;
+            }
+
+
+.html-ie11 .b-lenta .b-feedwidgets-options .b-selectus .label {
+            padding: 9px 6px 3px;
+            }
+
+
+/* item */
+
+
+.b-feedwidgets-item {
+        position: relative;
+        margin: 0 0 -1px;
+        padding: 0 0 1px;
+        }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .b-lenta-calendar TABLE TD,
+    .b-feedsettings-on .b-lenta-calendar TABLE TH {
+        font-size: 0.875em;
+        }
+
+
+.b-feedsettings-on .b-mysocial-body,
+    .b-feedsettings-on .b-mysocial-footer,
+    .b-feedsettings-on .b-todaylj-item-meta,
+    .b-feedsettings-on .b-todaylj-body,
+    .b-feedsettings-on .b-todaylj-footer,
+    .b-feedsettings-on .b-mylinks-item-meta,
+    .b-feedsettings-on .b-mylinks-body,
+    .b-feedsettings-on .b-mylinks-footer,
+    .b-feefsettings-on .b-myupdates-item-meta,
+    .b-feedsettings-on .b-myupdates-body,
+    .b-feedsettings-on .b-myupdates-footer {
+        font-size: 0.875em;
+        }
+
+
+.b-feedsettings-on.b-lenta-tiny-size .b-lenta-calendar TABLE TD,
+    .b-feedsettings-on.b-lenta-tiny-size .b-lenta-calendar TABLE TH,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mysocial-item-meta,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mysocial-body,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mysocial-footer,
+    .b-feedsettings-on.b-lenta-tiny-size .b-todaylj-body,
+    .b-feedsettings-on.b-lenta-tiny-size .b-todaylj-footer,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mylinks-item-meta,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mylinks-body,
+    .b-feedsettings-on.b-lenta-tiny-size .b-mylinks-footer,
+    .b-feefsettings-on.b-lenta-tiny-size .b-myupdates-item-meta,
+    .b-feedsettings-on.b-lenta-tiny-size .b-myupdates-body,
+    .b-feedsettings-on.b-lenta-tiny-size .b-myupdates-footer {
+        font-size: 1em;
+        }
+
+
+/* header margin for buttons below */
+
+
+.b-feedwidgets-item .b-todaylj-head,
+        .b-feedwidgets-item .b-mylinks-header,
+        .b-feedwidgets-item .b-myupdates-header,
+        .b-feedwidgets-item .b-mysocial-header {
+            margin-right: 65px;
+            }
+
+
+/* up-down buttons */
+
+
+.b-feedwidgets-move {
+            position: absolute;
+            top: 25px;
+            top: 1.7625rem;
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            padding: 0;
+            background: url(/img/icons/unit_v3.png?v=42878) no-repeat 0 -113px;
+            font: 0/0 a;
+            cursor: pointer;
+            color: #7A9199;
+            }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .b-feedwidgets-move {
+            background: none;
+            }
+
+
+.b-feedwidgets-move .svgicon {
+                width: 16px;
+                height: 16px;
+                }
+
+
+.b-feedwidgets-move-down {
+            right: 26px;
+            background-position: 0 -187px;
+            }
+
+
+.b-feedwidgets-move-up {
+            right: 45px;
+            background-position: 0 -162px;
+            }
+
+
+.b-feedwidgets-move {
+            visibility: hidden;
+            }
+
+
+.b-feedwidgets-item:hover .b-feedwidgets-move,
+        .g-sensor .b-feedwidgets-move,
+        .mobile-msg .b-feedwidgets-move {
+            visibility: visible;
+            }
+
+
+/* first item */
+
+
+.b-feedwidgets-item:first-child .b-feedwidgets-move-up {
+            display: none;
+            }
+
+
+/* last item */
+
+
+.b-feedwidgets-item:last-child .b-feedwidgets-move-down {
+            display: none;
+            }
+
+
+.b-feedwidgets-item:nth-last-child(2) .b-feedwidgets-move-up {
+            right: 26px;
+            }
+
+
+/* close button */
+
+
+.b-feedwidgets-close {
+            position: absolute;
+            top: 25px;
+            top: 1.7625rem;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            padding: 0;
+            background: url(/img/icons/unit_v3.png?v=42878) no-repeat 0 -113px;
+            font: 0/0 a;
+            cursor: pointer;
+            color: #7A9199;
+            }
+
+
+.b-feedwidgets-close {
+            visibility: hidden;
+            }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .b-feedwidgets-close {
+            background: none;
+            }
+
+
+.b-feedwidgets-item:hover .b-feedwidgets-close,
+        .g-sensor .b-feedwidgets-close,
+        .mobile-msg .b-feedwidgets-close {
+            visibility: visible;
+            }
+
+
+/* enabled feedsettings */
+
+
+.b-feedsettings-on .b-mysocial-item-dorepost .b-mysocial-item-icon,
+        .b-feedsettings-on .b-mysocial-item-icon {
+            background-image: none !important;
+            color: #7A9199;
+            }
+
+
+/* adfox banner (LJSUP-20737) */
+
+
+.b-lenta-adfox:not(:empty) {
+    margin: 1.5em 0 0;
+    }
+
+
+.body-state-sidebar-opened .l-flatslide-aside-button:after {
+    right: 360px;
+    }
+
+
+/* Media Queries
+----------------------------------*/
+
+
+@media all and (min-width: 1001px) {
+    .iphone.body-state-sidebar-opened .s-header {
+        margin-left: 0;
+        }
+}
+
+
+/* xs-size screen (900px) */
+
+
+@media all and (max-width: 900px) {
+    .j-e-scroll {
+        position: static;
+        }
+}
+
+
+@media (max-width: 900px ){
+    /* Footer
+    ---------------------- */
+    .b-lenta-footer {
+        margin: 20px 0 50px;
+        }
+    .b-lenta--v3 .b-lenta-footer {
+        margin-bottom: 0;
+        }
+}
+
+
+@media (max-width: 680px ){
+    /* Footer
+    ---------------------- */
+    .b-pager-link,
+    .b-pager-link-disable {
+        padding: 10px;
+        }
+
+    .body-state-sidebar-opened .l-flatslide-aside-button:after {
+        right: 310px;
+        }
+}
+
+
+@media screen and (max-width: 650px) {
+
+     /* Page
+    ---------------------- */
+    .j-l-page-wrapper {
+        padding-left: 0;
+        }
+    .j-l-page-inner {
+        box-sizing: border-box;
+        padding: 20px 10px;
+        }
+    .b-lenta .l-mainpage-container {
+        margin: 0;
+        }
+
+     /* Static, dynamic widgets
+    ---------------------- */
+    .b-lenta-sidebar-static,
+    .b-lenta-sidebar-section {
+        width: 100%;
+        height: auto;
+        }
+    .b-lenta-sidebar-static {
+        position: static;
+        }
+
+    /* Userpic
+    ---------------------- */
+    .b-lenta-item-userpic {
+        float: left;
+        margin: 0 10px 10px 0;
+        }
+
+    /* Entry
+    ---------------------- */
+    .i-ljuser-withalias.i-ljuser-showalias .i-ljuser-alias {
+        display: none;
+        }
+    .j-e-actions-list {
+        margin: 0;
+        }
+
+    /* Sidebar
+    ---------------------- */
+    .b-feedwidgets {
+        width: 330px;
+        }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .b-feedwidgets {
+        width: auto;
+        }
+
+    .b-feedwidgets-move,
+    .b-feedwidgets-close {
+        top: 1.9625rem;
+        }
+    .b-feedwidgets-move,
+    .b-feedwidgets-close,
+    .b-feedwidgets-move .svgicon.flaticon,
+    .b-feedwidgets-close .svgicon.flaticon {
+        width: 12px;
+        height: 12px;
+        }
+    .b-feedwidgets-move-down {
+        right: 25px;
+        }
+    .b-feedwidgets-move-up {
+        right: 40px;
+        }
+    .b-feedwidgets-close {
+        right: 10px;
+        }
+    .b-feedwidgets-item .b-feedwidgets-close,
+    .b-feedwidgets-item .b-feedwidgets-move {
+        visibility: visible;
+        }
+
+}
+
+
+@media print {
+    .b-lenta .l-flatslide-content {
+        min-height: 0;
+        }
+}
+
+/* <<< file end: stc/lenta/lenta_v3/lenta.css */
+
+/*# map link was there [lenta.css.map] */

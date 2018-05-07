@@ -29136,87 +29136,6 @@ LJ.UI.registerTemplate('templates-Widgets-bubble', "<div class=\"b-popup bubble-
 /* <<< file end: js/jquery/jquery.lj.bubble.js */
 
 //# map link was there [jquery.lj.bubble.js.map]
-/* >>> file start: js/core/social.js */
-//= require js/core/util/global.js
-
-/* global FB */
-/* eslint-disable angular/window-service */
-/* eslint-disable angular/log */
-/* eslint-disable angular/angularelement */
-
-(function (a) {
-  return a;
-})();
-
-(function () {
-
-  var globalDocument = LJ.Util.getDocument();
-
-  LJ.define('LJ.Social');
-
-  LJ.Social.load = function () {
-    var locale = LJ.get('remoteLocale'),
-        scripts = {
-      ok: 'https://connect.ok.ru/connect.js',
-      vk: '//vk.com/js/api/openapi.js?105',
-
-      google: function google() {
-        return LJ.injectScript('https://apis.google.com/js/platform.js',
-
-        // replace ru_RU with ru
-        { text: '{lang: "' + locale.replace(/_.*/, '') + '"}' });
-      },
-
-      facebook: function facebook() {
-        var fbRoot = globalDocument.createElement('div');
-        fbRoot.id = 'fb-root';
-        globalDocument.body.appendChild(fbRoot);
-
-        return LJ.injectScript('//connect.facebook.net/' + locale + '/sdk.js').then(function () {
-          FB.init({ appId: '214181831945836', xfbml: false, version: 'v2.6' }, null, fbRoot);
-        });
-      },
-
-      // twitter and surfingbird buttons works through iframe at the moment
-      surfingbird: 'https://surfingbird.ru/share/share.min.js',
-      twitter: 'https://platform.twitter.com/widgets.js',
-      ramblerKassa: 'https://s2.kassa.rl0.ru/widget/js/ticketmanager.js',
-      emoji: '//twemoji.maxcdn.com/2/twemoji.min.js?2.2',
-      instagram: '//platform.instagram.com/en_US/embeds.js',
-      telegramEmbedExpander: '//telegram.org/js/telegram-widget.js'
-
-    };
-
-
-    /**
-     * Scripts loader. Also it caches loading promise to load script once.
-     * @param  {String} type    Social script provider
-     * @param  {Object} options Various options, e.g. `force`
-     * @return {Promise}        Script loading promise
-     */
-    function load(type) {
-      var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-      if (!options.force && load[type]) {
-        return load[type];
-      }
-
-      if (!scripts[type]) {
-        throw new Error('Social script for ' + type + ' is not provided.');
-      }
-
-      load[type] = typeof scripts[type] === 'function' ? // eslint-disable-line
-      scripts[type]() : LJ.injectScript(scripts[type]);
-
-      return load[type];
-    }
-
-    return load;
-  }();
-})();
-/* <<< file end: js/core/social.js */
-
-//# map link was there [social.js.map]
 /* >>> file start: js/node_modules/whatwg-fetch/fetch.js */
 (function (self) {
   'use strict';
@@ -29823,7 +29742,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 Site.page.template['CleanHtml/v3/LikeStatic.tmpl'] = '<!-- Social Repost Buttons (LJSUP-18768) -->\n\n<!-- lj repost -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-repost\n        \"\n    >\n    <a\n        href=\"javascript:void(0)\"\n        >\n        <span class=\"b-flatrepost\"><!--\n            --><span class=\"b-flatrepost-name\"><!--\n            --></span><!--\n        --></span>\n    </a>\n</div>\n\n<!-- facebook -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-facebook\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-facebook\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Facebook\"\n            >\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--facebook\" width=\"12\" height=\"22\">\n                <use xlink:href=\"#flaticon--facebook\"></use>\n            </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- twitter -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-twitter\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-twitter\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Twitter\"\n            >\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--twitter\" width=22 height=\"18\">\n                <use xlink:href=\"#flaticon--twitter\"></use>\n            </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- google plus -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-google\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-google\n            b-flatsocial-button\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Google+\"\n            >\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--googleplus2015\" width=\"24\" height=\"16\">\n            <use xlink:href=\"#flaticon--googleplus2015\"></use>\n        </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- vk -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-vkontakte\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-vk\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"VK\"\n            >\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--vk\" width=\"22\" height=\"14\">\n            <use xlink:href=\"#flaticon--vk\"></use>\n        </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- surfinbird -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-surfingbird\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-surfingbird\n            b-flatsocial-button\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Surfingbird\"\n            >\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--surfingbird\" width=\"22\" height=\"18\">\n            <use xlink:href=\"#flaticon--surfingbird\"></use>\n        </svg>\n    </span><!--\n    --></a>\n</div>\n\n<!-- tumblr -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-tumblr\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-tumblr\n            b-flatsocial-button\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Tumblr\"\n            >\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--tumblr\" width=\"22\" height=\"18\">\n            <use xlink:href=\"#flaticon--tumblr\"></use>\n        </svg>\n    </span><!--\n    --></a>\n</div>\n\n\n<!-- pocket -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-pocket\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-pocket\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"Pocket\"\n            >\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--pocket\" width=\"22\" height=\"20\">\n            <use xlink:href=\"#flaticon--pocket\"></use>\n        </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- ok -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-odnoklassniki\n        \"\n    >\n    <a\n        href=\"javascript:void(0);\"\n        class=\"\n            b-flatsocial\n            b-flatsocial-disable-counter\n            b-flatsocial-ok\n            \"\n        ><!--\n        --><span\n            class=\"b-flatsocial-name\"\n            title=\"OK\"\n            >\n        <svg xml:base=\"\" xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon flaticon flaticon--odnoklassniki\" width=\"15\" height=\"23\">\n            <use xlink:href=\"#flaticon--odnoklassniki\"></use>\n        </svg>\n    </span><!--\n        --><span\n            class=\"b-flatsocial-counter\"\n            >0</span><!--\n    --></a>\n</div>\n\n<!-- give 10 tokens -->\n<div\n    class=\"\n        lj-like-item\n        lj-like-item-livejournal\n        \"\n    >\n    <span\n        class=\"\n            b-flatrepost\n            b-flatrepost-give\n            donate-button\n            embed-button\n            b-flatrepost-disabled\n            \"\n        ><!--\n        --><span class=\"b-flatrepost-icon\"></span><!--\n        --><span class=\"b-flatrepost-name\"><!--\n            --><span class=\" b-flatrepost-title\">Give 10</span><!--\n        --></span><!--\n    --></span>\n</div>\n';
-//= require js/core/social.js
 //= require js/core/social-caching.js
 
 //= require_ml sharing.service.digg
@@ -29853,6 +29771,64 @@ Site.page.template['CleanHtml/v3/LikeStatic.tmpl'] = '<!-- Social Repost Buttons
   'use strict';
 
   LJ.define('LJ.Social');
+
+  LJ.Social.load = function () {
+    var locale = LJ.get('remoteLocale'),
+        scripts = {
+      ok: 'https://connect.ok.ru/connect.js',
+      vk: '//vk.com/js/api/openapi.js?105',
+
+      google: function google() {
+        return LJ.injectScript('https://apis.google.com/js/platform.js',
+
+        // replace ru_RU with ru
+        { text: '{lang: "' + locale.replace(/_.*/, '') + '"}' });
+      },
+
+      facebook: function facebook() {
+        var fbRoot = $('<div />', { id: 'fb-root' }).appendTo('body');
+
+        return LJ.injectScript('//connect.facebook.net/' + locale + '/sdk.js').then(function () {
+          FB.init({ appId: '214181831945836', xfbml: false, version: 'v2.6' }, null, fbRoot.get(0));
+        });
+      },
+
+      // twitter and surfingbird buttons works through iframe at the moment
+      surfingbird: 'https://surfingbird.ru/share/share.min.js',
+      twitter: 'https://platform.twitter.com/widgets.js',
+      ramblerKassa: 'https://s2.kassa.rl0.ru/widget/js/ticketmanager.js',
+      emoji: '//twemoji.maxcdn.com/2/twemoji.min.js?2.2',
+      instagram: '//platform.instagram.com/en_US/embeds.js',
+      telegramEmbedExpander: '//telegram.org/js/telegram-widget.js'
+
+    };
+
+
+    /**
+     * Scripts loader. Also it caches loading promise to load script once.
+     * @param  {String} type    Social script provider
+     * @param  {Object} options Various options, e.g. `force`
+     * @return {Promise}        Script loading promise
+     */
+    function load(type) {
+      var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+      if (!options.force && load[type]) {
+        return load[type];
+      }
+
+      if (!scripts[type]) {
+        throw new Error('Social script for ' + type + ' is not provided.');
+      }
+
+      load[type] = typeof scripts[type] === 'function' ? // eslint-disable-line
+      scripts[type]() : LJ.injectScript(scripts[type]);
+
+      return load[type];
+    }
+
+    return load;
+  }();
 
   /**
    * Parse tweets, FB posts, Youtube subscribe buttons, etc
@@ -66708,11 +66684,6 @@ function createAliasPopup() {
           }
           ljuser.className += ' ContextualPopup';
         }
-      }
-
-      var parentLjUser = node.getAttribute('lj:user');
-      if (parentLjUser) {
-        ljuser.username = parentLjUser;
       }
     },
 

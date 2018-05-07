@@ -1,1 +1,0 @@
-document.write('<iframe style="display:none;" width="0" height="0" frameBorder="0" src="https://loadus.exelator.com/load//net.php?n=aHR0cHM6Ly9zeW5jLmFscGhvbnNvLnR2L3N5bmM%2Fc3JjaWQ9MjAwJnB1aWQ9NjhmY2YzMGE5NGJmMTBkMzlhOWVjYWJkZDZiYTE1Y2Q%3D&h=0ba48b406b07db6808b012be7918fc55"></iframe>\n');

@@ -1,0 +1,121 @@
+/* >>> file start: stc/widgets/bubble-ljuser.css */
+/* insert username */
+
+.b-bubble-user {
+    width: 280px;
+    }
+
+.b-updateform-bubble-user-fields {
+        text-align: left;
+        }
+
+.b-bubble-user .b-updateform-bubble-input-wrapper {
+            position: relative;
+            display: block;
+            }
+
+.b-bubble-user .b-updateform-bubble-input,
+        .b-bubble-user .b-updateform-bubble-input[type="text"] {
+            width: 100%;
+            margin: 3px 0;
+            padding: 3px 2px 3px 22px;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: #0051B7;
+            }
+
+.b-updateform-bubble-input-username .b-updateform-bubble-input-pic {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            width: 16px;
+            height: 16px;
+            margin: -8px 0 0;
+            padding: 0;
+            background: url(/img/userinfo_v8.svg?v=70323) no-repeat 0 0;
+            font: 0/0 serif;
+            }
+
+/* warning in bubble */
+
+.b-updateform-bubble-warning {
+            display: none;
+            }
+
+.b-bubble-error .b-updateform-bubble-warning {
+            display: block;
+            }
+
+/* error */
+
+.b-bubble-user .b-updateform-bubble-error .b-updateform-bubble-input,
+        .b-bubble-user .b-updateform-bubble-error .b-updateform-bubble-input[type="text"] {
+            color: #F00;
+            }
+
+/* title */
+
+.b-updateform-bubble-input-title {
+            display: none;
+            margin: 10px 0 0;
+            }
+
+.b-updateform-bubble-user-edit .b-updateform-bubble-input-title {
+            display: block;
+            }
+
+.b-bubble-user .b-updateform-bubble-input-title .b-updateform-bubble-input,
+            .b-bubble-user .b-updateform-bubble-input-title .b-updateform-bubble-input[type="text"] {
+                width: 240px;
+                padding-left: 2px;
+                }
+
+/* hint in bubble */
+
+.b-updateform-bubble-hint {
+            position: relative;
+            display: block;
+            margin: 2px 0 6px;
+            padding: 0 0 1px;
+            border-color: #D4D4D6;
+            color: #999;
+            }
+
+/* example in bubble */
+
+.b-updateform-bubble-example {
+            word-break: break-all;
+            word-break: break-word;
+            -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                    hyphens: auto;
+            border-bottom: 1px dotted;
+            cursor: pointer;
+            }
+
+.b-updateform-bubble-example:hover,
+        .b-updateform-bubble-example:active {
+            color: #C00;
+            }
+
+.b-updateform-bubble-user-button {
+        text-align: right;
+        }
+
+.b-updateform-bubble-user-button-save,
+        .b-updateform-bubble-user-edit .b-updateform-bubble-user-button-insert {
+            display: none;
+            }
+
+.b-updateform-bubble-user-edit .b-updateform-bubble-user-button-save {
+            display: inline;
+            }
+
+@media all and (max-width: 650px) {
+.b-bubble-user .b-updateform-bubble-wrapper {
+    margin-bottom: 0;
+    }
+}
+/* <<< file end: stc/widgets/bubble-ljuser.css */
+
+/*# map link was there [bubble-ljuser.css.map] */

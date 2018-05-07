@@ -1,0 +1,123 @@
+/* >>> file start: stc/widgets/facebookdigest.css */
+.fb-digest {
+    }
+    .fb-digest::before {
+        content: '';
+        display: table;
+        width: 100%;
+        }
+    .fb-digest IMG {
+    max-width: 100%;
+    height: auto;
+    }
+    .fb-digest__source {
+    position: relative;
+    z-index: 2;
+    height: 1.4em;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: right;
+    }
+    .fb-digest__source-inner {
+        position: relative;
+        display: inline-block;
+        margin: -.3em -.3em 0 0;
+        padding: .3em .7em;
+        border-radius: 1px;
+        transition: all .2s;
+        }
+    .fb-digest__source-inner::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            background: transparent;
+            border-radius: 3px;
+            transition: all .2s;
+            }
+    .fb-digest__source-inner:hover::before {
+            margin: -3px;
+            background: #3b5998;
+            }
+    .fb-digest__source-content {
+        position: relative;
+        max-height: 1.4em;
+        overflow: hidden;
+        transition: all .2s;
+        }
+    .fb-digest__source-inner:hover .fb-digest__source-content {
+            max-height: 5em;
+            }
+    .fb-digest__source-link {
+        display: block;
+        border: 0 !important;
+        }
+    .fb-digest__source-link:hover {
+            text-decoration: underline;
+            }
+    .fb-digest__source-inner:hover .fb-digest__source-link {
+        color: #FFF !important;
+        }
+    .fb-digest__event-name {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+    .fb-digest__location {
+    margin-bottom: 10px;
+    }
+    .fb-digest__image {
+    display: block;
+    margin-bottom: 20px;
+    }
+    .fb-digest__image:last-child {
+        margin-bottom: 0;
+        }
+    .fb-digest__video {
+    margin-bottom: 20px;
+    }
+    .fb-digest__video:last-child {
+        margin-bottom: 0;
+        }
+    .fb-digest__video-placeholder,
+    .fb-digest__video SPAN,
+    .fb-digest__video IFRAME {
+        max-width: 100%;
+        }
+    .fb-digest__link {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 15px;
+    }
+    .fb-digest__link:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-top: 1px solid;
+        opacity: .3;
+        }
+    .fb-digest__link-title {
+        margin: 0 0 7px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        }
+    .fb-digest__link-desc {
+        margin: 0;
+        font-size: 12px;
+        }
+    .fb-digest__readmore-link {
+    display: inline-block;
+    margin-top: 10px;
+    }    
+
+
+/* <<< file end: stc/widgets/facebookdigest.css */
+
+/*# map link was there [facebookdigest.css.map] */

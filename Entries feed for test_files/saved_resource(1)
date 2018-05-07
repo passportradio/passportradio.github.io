@@ -1,0 +1,69 @@
+/* >>> file start: js/storage.js */
+/* eslint-disable angular/window-service */
+
+/*
+ * Code for syncing iframe
+ */
+
+(function () {
+  var _key = getSearchParameter('key');
+  if (!_key) {
+    return null;
+  }
+
+  if (!inIframe()) {
+    return null;
+  }
+
+  window.addEventListener('storage', messagePost);
+  window.addEventListener('message', messageGet);
+
+  function messageGet(e) {
+    // check allowed domains
+    if (!/null/.test(e.origin) && !/https?:\/\/[^\/]*local\.bulyon\.com/.test(e.origin) && !/https?:\/\/[^\/]*livejournal\.com/.test(e.origin) && !/https?:\/\/[^\/]*varlamov\.ru/.test(e.origin)) {
+      return null;
+    }
+
+    storageWrite(e.data);
+    messagePost({ newValue: e.data });
+  }
+
+  function messagePost(e) {
+    window.parent.postMessage(e.newValue, '*');
+  }
+
+  function storageWrite() {
+    var value = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+
+    localStorage.setItem(_key, value);
+    return value;
+  }
+
+  function getSearchParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+
+    var url = window.location.href,
+        regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+
+
+    if (!results) {
+      return null;
+    }
+    if (!results[2]) {
+      return '';
+    }
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  function inIframe() {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+      return true;
+    }
+  }
+})();
+/* <<< file end: js/storage.js */
+
+//# map link was there [storage.js.map]

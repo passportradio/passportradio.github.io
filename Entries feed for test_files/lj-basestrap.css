@@ -1463,6 +1463,83 @@ BODY .b-loginpopup-item A:hover,
 
 }
 
+.b-popup-lite {
+    font: 400 14px/20px "ProximaNova", Helvetica, sans-serif;
+    color: #333;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 160px;
+    padding: 7px 0;
+    margin-top: 0.8em;
+    border: 1px solid #D4DDE1;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 8px 12px rgba(0, 0, 0, .12);
+    border-radius: 6px;
+    z-index: 1;
+    text-align: left;
+    background-color: #FFF;
+    }
+
+.b-popup-lite__button {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 15px;
+    outline: 0;
+    border: 0;
+    text-align: inherit;
+    text-decoration: none;
+    transition: background-color .15s;
+    background-color: transparent;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.b-popup-lite__button:not(:disabled):hover,
+        .b-popup-lite__button:focus {
+    background-color: #F5F7F8;
+}
+
+.b-popup-lite__button--selected {
+    background-color: #F5F7F8;
+}
+
+.b-popup-lite__arrow {
+    font-size: 16px;
+    position: absolute;
+    top: -.5em;
+    left: 1em;
+    overflow: hidden;
+    width: 1em;
+    height: .5em;
+}
+
+.b-popup-lite__arrow::before {
+    content: "";
+    font-size: 11.313708498984761px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #D4DDE1;
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: #FFF;
+}
+
 /* Fader
 --------------------------- */
 
